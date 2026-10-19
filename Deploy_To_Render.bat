@@ -5,8 +5,8 @@ echo ===========================================================================
 echo   MCS Project Scout ^& Warehouse Lead Engine - Render Deployment Sync
 echo ============================================================================
 echo.
-echo [1/3] Staging updated leads.json, lead_pipeline_tasks.json, index.html, app.py...
-git add app.py index.html leads.json lead_pipeline_tasks.json requirements.txt render.yaml .gitignore
+echo [1/3] Staging updated leads.json, lead_pipeline_tasks.json, index.html guide.html, app.py...
+git add app.py index.html guide.html leads.json lead_pipeline_tasks.json requirements.txt render.yaml .gitignore
 git commit -m "Update MCS Lead Scout: 10 verified industrial leads, 5-dim scoring, contact/date editor, CoStar/cold-storage purge" 2>nul
 echo.
 echo [2/3] Pushing to GitHub (Elliotvness/mcs-lead-scout)...

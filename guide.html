@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McMurray Stern — Project Scout & Lead Engine Team Guide</title>
+  <script src="https://www.gstatic.com/external_hosted/tailwindcss/tailwindcss.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #ffffff !important; color: #0f172a !important; }
+      .print-break { page-break-before: always; }
+    }
+    .tab-btn.active {
+      background-color: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP NAVIGATION / ACTION BAR -->
+  <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-6 py-3.5">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center font-extrabold text-white shadow-md">
+          MCS
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-base font-extrabold tracking-tight text-white">MCS Project Scout &amp; Warehouse Lead Engine</h1>
+            <span class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full">v2.4 Team SOP &amp; Feature Guide</span>
+          </div>
+          <p class="text-xs text-slate-400">McMurray Stern · Santa Fe Springs, CA · Storage, Racking &amp; Automation Intelligence</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 no-print">
+        <a href="http://localhost:8000" target="_blank" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">
+          Open Local App (Port 8000)
+        </a>
+        <a href="https://mcs-lead-scout.onrender.com" target="_blank" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow transition">
+          Open Cloud App (Render)
+        </a>
+        <button onclick="window.print()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow transition cursor-pointer">
+          Print / Save PDF Guide
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8 space-y-10">
+
+    <!-- ===================================================================== -->
+    <!-- 1. EXECUTIVE SUMMARY HERO & KPI SNAPSHOT                              -->
+    <!-- ===================================================================== -->
+    <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950/60 border border-slate-800 p-8 shadow-2xl">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 text-xs font-semibold">
+          <span>Executive Summary &amp; Team Operating Manual</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          How McMurray Stern Captures High-Intent Warehouse Projects 30–90 Days Before Competitors
+        </h2>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          <strong>MCS Project Scout</strong> is McMurray Stern’s proprietary industrial lead intelligence and preliminary engineering platform. It aggregates verified commercial real estate occupier leases (<span class="font-mono text-blue-300">50K–692K+ SF</span>), municipal building &amp; racking permits (LADBS), California EDD WARN facility relocations/decommissionings, and government/military storage RFPs—automatically estimating pallet capacity, bill of materials, and turnkey budgetary pricing while equipping sales reps with verified decision-maker contacts and one-click outreach battlecards.
+        </p>
+      </div>
+
+      <!-- KPI STRIP -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-7">
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Verified Active Leads</span>
+          <span class="text-2xl font-extrabold text-white font-mono mt-1 block">46</span>
+          <span class="text-[11px] text-emerald-400 font-medium">100% CoStar-Free &amp; Clean</span>
+        </div>
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Est. Pipeline Value</span>
+          <span class="text-2xl font-extrabold text-emerald-400 font-mono mt-1 block">$10.8M+</span>
+          <span class="text-[11px] text-slate-400 font-medium">Turnkey Rack &amp; Automation</span>
+        </div>
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Scored Lease Tasks</span>
+          <span class="text-2xl font-extrabold text-amber-400 font-mono mt-1 block">10</span>
+          <span class="text-[11px] text-amber-300 font-medium">6 Urgent (≥4.15) · 4 High</span>
+        </div>
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Contact Coverage</span>
+          <span class="text-2xl font-extrabold text-blue-400 font-mono mt-1 block">46 / 46</span>
+          <span class="text-[11px] text-slate-400 font-medium">Execs, Brokers &amp; LinkedIn</span>
+        </div>
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Target Markets</span>
+          <span class="text-2xl font-extrabold text-purple-400 font-mono mt-1 block">11 Hubs</span>
+          <span class="text-[11px] text-slate-400 font-medium">SoCal, NorCal, AZ &amp; NV</span>
+        </div>
+        <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">CAD Handoff Ready</span>
+          <span class="text-2xl font-extrabold text-cyan-400 font-mono mt-1 block">87-Layer</span>
+          <span class="text-[11px] text-slate-400 font-medium">LAYERS.dwg &amp; Seismic</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 2. INTERACTIVE SECTION TABS                                           -->
+    <!-- ===================================================================== -->
+    <div class="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-4 no-print">
+      <button onclick="switchSection('all')" id="tab-all" class="tab-btn active px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        Show Complete Guide (All Sections)
+      </button>
+      <button onclick="switchSection('steps')" id="tab-steps" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        1. Step-by-Step Team Workflow (6 Steps)
+      </button>
+      <button onclick="switchSection('features')" id="tab-features" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        2. All Features Reference
+      </button>
+      <button onclick="switchSection('scoring')" id="tab-scoring" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        3. 5-Dimension Scoring &amp; Filtering Rules
+      </button>
+      <button onclick="switchSection('directory')" id="tab-directory" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        4. Top 10 Urgent Leads &amp; Contacts Cheat Sheet
+      </button>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION A: STEP-BY-STEP TEAM WORKFLOW (STEPS 1 TO 6)                  -->
+    <!-- ===================================================================== -->
+    <section id="sec-steps" class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-400">Section 01 · Standard Operating Procedure</span>
+          <h3 class="text-xl font-extrabold text-white mt-0.5">Step-by-Step Daily Team Workflow</h3>
+        </div>
+        <span class="text-xs text-slate-400">Follow these 6 steps from initial signal discovery to CAD layout handoff</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <!-- STEP 1 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 01</span>
+            <span class="text-xs text-slate-400 font-mono">Access &amp; Sync</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Launch the Dashboard &amp; Verify Live Feed</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Open the cloud dashboard at <a href="https://mcs-lead-scout.onrender.com" target="_blank" class="text-blue-400 underline">mcs-lead-scout.onrender.com</a> or run <code class="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300 font-mono">Start_Local_Server.bat</code> on your laptop (<code class="px-1.5 py-0.5 rounded bg-slate-800 text-blue-300 font-mono">http://localhost:8000</code>).
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>Top KPI Ribbon:</strong> Instantly check total active projects (<span class="font-mono text-white">46</span>), estimated pipeline volume, total pallet positions, and Tier-1 Hot count.</li>
+            <li><strong>Offline Resilience:</strong> Even if opened directly from OneDrive (<code class="font-mono text-slate-200">index.html</code>) without internet, all 46 leads and contacts are embedded and load automatically.</li>
+            <li><strong>Rescan Button:</strong> Click <strong>Rescan</strong> in the top-right header to reload the latest <code class="font-mono text-slate-200">leads.json</code> feed into memory.</li>
+          </ul>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 02</span>
+            <span class="text-xs text-slate-400 font-mono">Triage &amp; Filter</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Filter by Project Lifecycle, Market &amp; Priority Grade</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Use the <strong>Lifecycle Ribbon</strong> and filter dropdowns to isolate the exact type of opportunity you are hunting:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>Tenant Leases / New Builds (<code class="font-mono text-emerald-300">NEW_CONSTRUCTION</code>):</strong> Newly signed <span class="font-mono">100K–692K SF</span> occupier leases (e.g., Titanium Plus Auto Parts in Chino, Lionext in Santa Fe Springs, DCW in Rancho Dominguez).</li>
+            <li><strong>Building Permits (<code class="font-mono text-blue-300">BUILDING_PERMIT</code>):</strong> Active LADBS structural/warehouse alteration permits where tenants are modifying high-pile storage.</li>
+            <li><strong>Relocations / Closures (<code class="font-mono text-amber-300">FACILITY_RELOCATION</code>):</strong> WARN notices requiring rack teardown, anchor flush-grinding/epoxy slab restoration, and new facility re-permitting.</li>
+            <li><strong>Gov / Military RFPs (<code class="font-mono text-purple-300">GOVERNMENT_RFP</code>):</strong> Base armory, evidence, and public works high-density storage contracts.</li>
+          </ul>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 03</span>
+            <span class="text-xs text-slate-400 font-mono">GIS &amp; Dock Recon</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Inspect the Facility via Interactive GIS Map &amp; Google Satellite</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Every project is geocoded on the interactive <strong>Southern California &amp; Western US Logistics Map</strong> on the left pane (and inside the slide-over drawer’s mini-map).
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>Color-Coded Pins:</strong> <span class="text-rose-400 font-bold">Red</span> = Tier-1 Hot (<code class="font-mono">Grade A+</code> / <code class="font-mono">Urgent ≥4.15</code>), <span class="text-amber-400 font-bold">Amber</span> = Tier-2 Warm (<code class="font-mono">Grade A/B</code>).</li>
+            <li><strong>Satellite Dock Inspection:</strong> Inside any lead drawer, toggle the mini-map to <strong>Satellite</strong> or click <strong>Inspect Docks (Google Satellite)</strong> to count dock-high doors, staging yard depth, and truck court clearance before calling the prospect.</li>
+            <li><strong>Driving Route:</strong> Click <strong>Get Driving Route to Facility</strong> to generate turn-by-turn directions from McMurray Stern HQ (<span class="font-mono">15020 Marquardt Ave, Santa Fe Springs</span>).</li>
+          </ul>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 04</span>
+            <span class="text-xs text-slate-400 font-mono">Contacts, Dates &amp; CRM</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Review or Edit Contacts, Project Dates &amp; LinkedIn Targets</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Click any project card to open the <strong>Slide-Over Dossier Drawer</strong> and scroll to the <strong>Primary Decision-Maker &amp; Timeline</strong> panel:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>Pre-Populated Decision-Makers:</strong> All 46 projects include verified executive names (CEO, SVP Supply Chain, COO) and transaction brokers (DAUM, Lee &amp; Associates, CBRE, JLL, Klabin, Voit) with direct phones and emails.</li>
+            <li><strong>Live Contact &amp; Date Editor:</strong> Update <em>Contact Name, Title, Company/Broker, Email, Phone, Filing/Lease Date,</em> or <em>Target Move-In Date</em> and click <strong>Save Contact &amp; Dates</strong>. Changes persist to the server (<code class="font-mono">leads.json</code>) and browser storage.</li>
+            <li><strong>One-Click LinkedIn Lookup:</strong> Click <strong>Search Target on LinkedIn</strong> to launch a pre-filtered LinkedIn People search for that exact company and executive/broker.</li>
+          </ul>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 05</span>
+            <span class="text-xs text-slate-400 font-mono">BOM &amp; Sales Pitch</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Run the Live Racking Estimator &amp; Copy the Outreach Dossier</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            While on the phone with a broker or facility manager, use the interactive <strong>Turnkey Racking &amp; BOM Calculator</strong> inside the drawer:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>What-If Sizing:</strong> Type a new <strong>Square Footage</strong> or <strong>Clear Height (ft)</strong> and click <strong>Recalculate</strong>. The engine recalculates <em>Pallet Capacity, Total Bays, Upright Frames, Step Beams, Flared Wire Decks, Seismic Wedge Anchors,</em> and the <em>Turnkey Budgetary Range ($82–$108/pallet position)</em>.</li>
+            <li><strong>Ready-to-Send Email &amp; Phone Script:</strong> Scroll to the <strong>Sales Outreach Battlecard</strong> to copy the tailored email subject, body (pitching a complimentary preliminary CAD layout + California Ch. 32 High-Pile permit packet), and cold-call opener script.</li>
+          </ul>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-blue-500/50 transition">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">STEP 06</span>
+            <span class="text-xs text-slate-400 font-mono">Engineering &amp; Permits</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Handoff to MCS Rack Studio (87-Layer AutoCAD) &amp; Track Stage</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Once a prospect agrees to a site walk or preliminary layout review:
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+            <li><strong>Update Pipeline Stage:</strong> Change the status dropdown at the top of the drawer from <code class="font-mono">NEW</code> &rarr; <code class="font-mono">CONTACTED</code> &rarr; <code class="font-mono">SITE_WALK</code> &rarr; <code class="font-mono">PROPOSAL_SENT</code> &rarr; <code class="font-mono">WON</code> and click <strong>Save</strong>.</li>
+            <li><strong>MCS Rack Studio Handoff:</strong> Transfer the facility’s clear height, bay count, and zip code into <strong>MCS Rack Studio</strong> to generate the 87-layer McMurray Stern (<code class="font-mono">LAYERS.dwg</code>) AutoCAD submittal (<code class="font-mono">Q-RACK-FRAM</code>, <code class="font-mono">Q-RACK-BEAM</code>, <code class="font-mono">Q-RACK-DECK</code>, <code class="font-mono">Q-FIRE-FLUE</code>), NFPA 13 (<span class="font-mono">18"</span> sprinkler clearance), CFC Ch. 32 (<span class="font-mono">6"</span> longitudinal / <span class="font-mono">3"</span> transverse flue), and ASCE 7-22 seismic calculations.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION B: COMPLETE FEATURE REFERENCE MATRIX                          -->
+    <!-- ===================================================================== -->
+    <section id="sec-features" class="space-y-5 print-break">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">Section 02 · Platform Capabilities</span>
+        <h3 class="text-xl font-extrabold text-white mt-0.5">Complete Feature Reference &amp; Architecture Summary</h3>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/80 shadow-xl">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-slate-400 uppercase font-mono text-[11px]">
+              <th class="py-3.5 px-4">Feature / Module</th>
+              <th class="py-3.5 px-4">Location in UI</th>
+              <th class="py-3.5 px-4">What It Does</th>
+              <th class="py-3.5 px-4">Team Benefit / Why It Matters</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/70 text-slate-200">
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">1. Executive KPI Ribbon</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Top Header Bar</td>
+              <td class="py-3 px-4">Displays live counts of Active Projects, Pipeline Dollar Volume, Total Est. Pallets, and Tier-1 Hot Leads.</td>
+              <td class="py-3 px-4 text-slate-300">Gives leadership an instant pulse on addressable territory volume.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">2. Lifecycle Filter Tabs</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Upper Filter Bar</td>
+              <td class="py-3 px-4">One-click segmentation across <em>All</em>, <em>Tenant Leases / New Builds</em>, <em>Building Permits</em>, <em>Relocations (WARN)</em>, and <em>Gov RFPs</em>.</td>
+              <td class="py-3 px-4 text-slate-300">Lets reps separate new rack installations from teardown/buyout/relocation plays.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">3. 5-Dimension Weighted Lead Score</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Project Card Badge</td>
+              <td class="py-3 px-4">Scores commercial leases from <span class="font-mono">1.00–5.00</span> using Recency (20%), Size Fit (15%), New Space (20%), Growth (20%), and Reachability (25%).</td>
+              <td class="py-3 px-4 text-slate-300">Eliminates guesswork—reps call <code class="font-mono text-rose-300">Urgent (≥4.15)</code> deals first.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">4. Verified Source Attribution Links</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Card Footer &amp; Drawer</td>
+              <td class="py-3 px-4">Links directly to verified publications (REBusiness Online, DAUM Commercial, Connect CRE, Citybiz, CA EDD, LADBS).</td>
+              <td class="py-3 px-4 text-slate-300">100% compliant (zero CoStar/LoopNet scraping) with full CCPA/CPRA source tracking.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">5. Interactive Leaflet GIS Map</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Left Split-Pane</td>
+              <td class="py-3 px-4">Plots all 46 facilities with interactive markers; clicking a pin opens the project’s engineering &amp; sales dossier.</td>
+              <td class="py-3 px-4 text-slate-300">Enables geographic territory routing and multi-stop site visit planning.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">6. Satellite Dock &amp; Yard Inspector</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Slide-Over Drawer (Left)</td>
+              <td class="py-3 px-4">Embedded satellite mini-map + one-click Google Satellite &amp; Google Maps driving directions buttons.</td>
+              <td class="py-3 px-4 text-slate-300">Lets engineers verify dock-high door counts and staging access before visiting.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">7. Inline Contact &amp; Timeline Editor</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Slide-Over Drawer (Right)</td>
+              <td class="py-3 px-4">Editable fields for Contact Name, Title, Broker/GC, Email, Phone, Filing Date, and Target Move-In Date.</td>
+              <td class="py-3 px-4 text-slate-300">Saves updates directly to <code class="font-mono">leads.json</code> via API + browser <code class="font-mono">localStorage</code>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">8. Pre-Targeted LinkedIn Launcher</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Decision-Maker Card</td>
+              <td class="py-3 px-4">Generates a custom LinkedIn People search query combining the tenant company, executive name, and brokerage.</td>
+              <td class="py-3 px-4 text-slate-300">Cuts prospect research time from 15 minutes to 1 click.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">9. Live Racking &amp; BOM Estimator</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Drawer Engineering Panel</td>
+              <td class="py-3 px-4">Computes Pallet Positions, Bays, Upright Frames, Step Beams, Wire Decks, Wedge Anchors, and Turnkey Budget ($).</td>
+              <td class="py-3 px-4 text-slate-300">Gives reps instant ballpark engineering numbers during live discovery calls.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">10. Automated Sales Battlecard &amp; Email Generator</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Drawer Bottom Panel</td>
+              <td class="py-3 px-4">Writes a facility-specific cold email and phone script referencing the exact address, pallet count, and Ch. 32 seismic code.</td>
+              <td class="py-3 px-4 text-slate-300">One-click <em>Copy Email</em> and <em>Copy Script</em> buttons standardize team messaging.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">11. One-Click CSV Pipeline Export</td>
+              <td class="py-3 px-4 font-mono text-slate-400">Top Header (<code class="font-mono">/api/export-csv</code>)</td>
+              <td class="py-3 px-4">Downloads <code class="font-mono">mcs_project_scout_leads.csv</code> with all 28 columns including weighted scores, contacts, dates, and BOM estimates.</td>
+              <td class="py-3 px-4 text-slate-300">Imports cleanly into HubSpot, Salesforce, ClickUp, or Excel for weekly sales meetings.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white">12. Dual Cloud (Render) + Offline Architecture</td>
+              <td class="py-3 px-4 font-mono text-slate-400"><code class="font-mono">app.py</code> &amp; <code class="font-mono">Deploy_To_Render.bat</code></td>
+              <td class="py-3 px-4">FastAPI backend (<code class="font-mono">/api/leads</code>, <code class="font-mono">/api/pipeline-tasks</code>, <code class="font-mono">/healthz</code>) paired with embedded JSON fallback in <code class="font-mono">index.html</code>.</td>
+              <td class="py-3 px-4 text-slate-300">Works 24/7 on Render, on localhost:8000, or as a standalone file on any laptop.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION C: 5-DIMENSION SCORING RUBRIC & QUALIFICATION RULES           -->
+    <!-- ===================================================================== -->
+    <section id="sec-scoring" class="space-y-5">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">Section 03 · Qualification Methodology</span>
+        <h3 class="text-xl font-extrabold text-white mt-0.5">5-Dimension Weighted Lead Scoring Matrix &amp; Signal Rules</h3>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <!-- SCORING FORMULA CARD -->
+        <div class="lg:col-span-2 bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h4 class="text-sm font-bold text-white">Weighted Formula (1–5 Scale per Dimension)</h4>
+            <code class="px-2.5 py-1 rounded bg-slate-950 text-amber-300 font-mono text-xs border border-slate-800">
+              Total = (Recency×0.20) + (Size×0.15) + (NewSpace×0.20) + (Growth×0.20) + (Reachability×0.25)
+            </code>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="border-b border-slate-800 text-slate-400 font-mono text-[11px]">
+                  <th class="py-2 pr-3">Dimension</th>
+                  <th class="py-2 px-2">Weight</th>
+                  <th class="py-2 px-2 text-emerald-400">Score 5</th>
+                  <th class="py-2 px-2 text-blue-400">Score 4</th>
+                  <th class="py-2 px-2 text-amber-400">Score 3</th>
+                  <th class="py-2 pl-2 text-slate-400">Score 1–2</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr>
+                  <td class="py-2.5 pr-3 font-bold text-white">1. Recency</td>
+                  <td class="py-2.5 px-2 font-mono">0.20</td>
+                  <td class="py-2.5 px-2">&le; 1 month</td>
+                  <td class="py-2.5 px-2">1–3 months</td>
+                  <td class="py-2.5 px-2">3–6 months</td>
+                  <td class="py-2.5 pl-2">&gt; 6 months</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 pr-3 font-bold text-white">2. Size Fit</td>
+                  <td class="py-2.5 px-2 font-mono">0.15</td>
+                  <td class="py-2.5 px-2">100K–500K SF</td>
+                  <td class="py-2.5 px-2">50K–100K or 500K–1M</td>
+                  <td class="py-2.5 px-2">25K–50K or 1M+ SF</td>
+                  <td class="py-2.5 pl-2">&lt; 25K SF / Unknown</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 pr-3 font-bold text-white">3. New Space</td>
+                  <td class="py-2.5 px-2 font-mono">0.20</td>
+                  <td class="py-2.5 px-2">New lease / Empty shell</td>
+                  <td class="py-2.5 px-2">Pre-lease / Build-to-Suit</td>
+                  <td class="py-2.5 px-2">Facility expansion</td>
+                  <td class="py-2.5 pl-2">Renewal / No change</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 pr-3 font-bold text-white">4. Growth</td>
+                  <td class="py-2.5 px-2 font-mono">0.20</td>
+                  <td class="py-2.5 px-2">Hiring + New market DC</td>
+                  <td class="py-2.5 px-2">Steady 3PL/Mfg growth</td>
+                  <td class="py-2.5 px-2">Stable operations</td>
+                  <td class="py-2.5 pl-2">Consolidating / Distressed</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 pr-3 font-bold text-white">5. Reachability</td>
+                  <td class="py-2.5 px-2 font-mono">0.25</td>
+                  <td class="py-2.5 px-2">Named exec + direct phone/email</td>
+                  <td class="py-2.5 px-2">Named contact via broker</td>
+                  <td class="py-2.5 px-2">Company ID’d, no direct contact</td>
+                  <td class="py-2.5 pl-2">Confidential tenant (Score 2)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30">
+              <span class="text-xs font-mono font-bold text-rose-300 block">&ge; 4.15 &rarr; URGENT</span>
+              <span class="text-[11px] text-slate-300">Same-day broker &amp; executive outreach + preliminary CAD offer</span>
+            </div>
+            <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
+              <span class="text-xs font-mono font-bold text-amber-300 block">3.50 – 4.14 &rarr; HIGH</span>
+              <span class="text-[11px] text-slate-300">Contact within 48 hours; track construction delivery schedule</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700">
+              <span class="text-xs font-mono font-bold text-slate-300 block">&lt; 3.50 &rarr; NORMAL</span>
+              <td class="text-[11px] text-slate-400">Monitor for tenant naming or permit pull</td>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIGNAL FILTERING & COMPLIANCE RULES -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h4 class="text-sm font-bold text-white">Mandatory Signal &amp; Compliance Rules</h4>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+              <span class="font-bold text-emerald-300 block mb-1">Pursue (Strong Signals)</span>
+              <p class="text-slate-300">New warehouse leases (<span class="font-mono">50K+ SF</span>), occupier building purchases, build-to-suit DCs, 3PL expansions, and LADBS high-pile racking permits.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30">
+              <span class="font-bold text-rose-300 block mb-1">Strictly Excluded</span>
+              <ul class="list-disc pl-4 text-slate-300 space-y-1">
+                <li><strong>Amazon Facilities:</strong> Excluded (self-performs racking).</li>
+                <li><strong>Cold Storage / Food Processing:</strong> Excluded (specialized vendor space).</li>
+                <li><strong>Lease Renewals &amp; Investor Flips:</strong> Excluded (racking already installed).</li>
+                <li><strong>CoStar / LoopNet:</strong> Never scraped or referenced (strict TOS compliance).</li>
+              </ul>
+            </div>
+            <div class="p-3 rounded-xl bg-blue-500/10 border border-blue-500/30">
+              <span class="font-bold text-blue-300 block mb-1">High-Piled Storage Permits (PRA Protocol)</span>
+              <p class="text-slate-300">CFC Chapter 32 High-Piled Combustible Storage permits are obtained via <strong>Public Records Act (PRA)</strong> requests to local Fire Prevention Bureaus (Santa Fe Springs Fire, Chino Valley Fire, LA County Fire, OCFA).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION D: TOP 10 URGENT & HIGH LEADS DIRECTORY CHEAT SHEET           -->
+    <!-- ===================================================================== -->
+    <section id="sec-directory" class="space-y-5 print-break">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-purple-400">Section 04 · Immediate Call Sheet</span>
+          <h3 class="text-xl font-extrabold text-white mt-0.5">Top 10 Verified Industrial Occupier Leases (With Enriched Contacts)</h3>
+        </div>
+        <span class="text-xs text-slate-400">All 10 leads are pre-loaded in your dashboard alongside 23 LADBS Permits, 9 WARN Relocations &amp; 4 Gov RFPs</span>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/90 shadow-xl">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/90 text-slate-400 uppercase font-mono text-[11px]">
+              <th class="py-3.5 px-4">Score &amp; Priority</th>
+              <th class="py-3.5 px-4">Tenant &amp; Facility Address</th>
+              <th class="py-3.5 px-4">Market &amp; Size</th>
+              <th class="py-3.5 px-4">Verified Decision-Makers &amp; Brokers</th>
+              <th class="py-3.5 px-4">Direct Phone &amp; Email</th>
+              <th class="py-3.5 px-4">Racking System Fit</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/70 text-slate-200">
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.80 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[5/4/5/5/5]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Titanium Plus Auto Parts</div>
+                <div class="text-slate-400">16380 Euclid Ave, Chino, CA 91708</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - Inland Empire</div>
+                <div>522,267 SF ($42M)</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Bin Xiao</strong> (CEO, Titanium Plus)<br/>
+                <strong>Gus Andros</strong> (DAUM) · <strong>Nathan &amp; Andrew Lara</strong> (Lara CRE)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(626) 968-3800</div>
+                <div>(909) 980-1234</div>
+                <div class="text-blue-400">gandros@daumcommercial.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">Multi-tier auto parts pick modules, selective rack &amp; wire decking</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.70 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/5/5]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Lionext Inc.</div>
+                <div class="text-slate-400">11650 Burke St (HQ: 13021 Leffingwell Rd), Santa Fe Springs, CA 90670</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-emerald-300">CA - Mid-Counties</div>
+                <div>106,110 SF ($22M)</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Ryan Campbell</strong> (EMD, NAI Capital — Tenant Rep)<br/>
+                <strong>Joel Hutak &amp; Phillip DeRousse</strong> (Principals, Lee &amp; Assoc)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(562) 222-3885</div>
+                <div>(714) 564-7169</div>
+                <div class="text-blue-400">info@lionext.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">&lt;2 mi from MCS HQ; 32' clear selective &amp; VNA pallet rack + dock guards</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.45 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/5/4]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">DCW Inc.</div>
+                <div class="text-slate-400">3040 E Ana St, Rancho Dominguez, CA 90221</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - South Bay</div>
+                <div>115,734 SF ($10.1M)</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Casey Mungo, Chuck Brill &amp; Nate Ortega</strong> (DAUM)<br/>
+                <strong>Tyler Rollema</strong> (The Klabin Co.)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(310) 538-6700</div>
+                <div>(310) 329-9000</div>
+                <div class="text-blue-400">cmungo@daumcommercial.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">3PL expansion (18 dock doors); high-density selective &amp; push-back rack</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.25 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/5/3]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Anduril Industries</div>
+                <div class="text-slate-400">1100 Valencia Ave (LogistiCenter at 55), Tustin, CA 92780</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - Orange County</div>
+                <div>177,766 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Matt Grimm</strong> (Co-Founder &amp; COO)<br/>
+                <strong>Dave Desper &amp; Nick Spatafore</strong> (CBRE) · <strong>Matt Mexia</strong> (Dermody)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(949) 891-1607</div>
+                <div>(949) 725-8500</div>
+                <div class="text-blue-400">contact@anduril.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">Defense hardware hub; structural selective rack, cantilever &amp; VLMs</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.25 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/5/3]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Hyper Solutions</div>
+                <div class="text-slate-400">2100 E Howell Ave (Stadium Landing), Anaheim, CA 92806</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - Orange County</div>
+                <div>100,784 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Vladimir Gulkarov</strong> (CEO &amp; Co-Founder)<br/>
+                <strong>Mitch Zehner &amp; Hayden Socci</strong> (Voit) · <strong>Dan Floriani</strong> (Pacific Ind.)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(888) 777-3154</div>
+                <div>(714) 935-2307</div>
+                <div class="text-blue-400">mzehner@voitco.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">Digital infrastructure mfg; heavy-capacity structural rack &amp; cantilever</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">4.25 URGENT</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/5/3]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Parts Town Unlimited</div>
+                <div class="text-slate-400">C|303 Industrial Park (Bldg B), Glendale, AZ 85307</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-amber-300">AZ - Phoenix</div>
+                <div>420,000 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Lisa Backlin</strong> (GVP Supply Chain) · <strong>Chris Dennison</strong> (COO)<br/>
+                <strong>Anthony Lydon, Marc Hertzberg &amp; Riley Gilbert</strong> (JLL)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(844) 804-8696</div>
+                <div>(602) 282-6300</div>
+                <div class="text-blue-400">anthony.lydon@jll.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">SW regional fulfillment hub; high-bay selective rack, mezzanines &amp; carton flow</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold">4.05 HIGH</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/4/3]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">ALPLA Inc.</div>
+                <div class="text-slate-400">Craig Rd Logistics Center Bldg A, North Las Vegas, NV 89032</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-purple-300">NV - Las Vegas</div>
+                <div>141,540 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Daniel Wilkins, Lou Hall &amp; Donna Alderson</strong> (C&amp;W Tenant Reps)<br/>
+                <strong>Jason Simon &amp; Rob Lujan</strong> (JLL)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(702) 796-7900</div>
+                <div>(702) 369-4800</div>
+                <div class="text-blue-400">daniel.wilkins@cushwake.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">Packaging mfg/warehouse; high-density drive-in / push-back pallet rack</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold">3.95 HIGH</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/4/4/4/4]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Keeco LLC</div>
+                <div class="text-slate-400">1420 N Tamarind Ave (Prologis Park Rialto I-210), Rialto, CA 92376</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - Inland Empire</div>
+                <div>677,225 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Giovanni Cervantes</strong> (SVP Supply Chain) · <strong>Paul Martins</strong> (VP Ops)<br/>
+                <strong>Michael Chavez &amp; Craig Hagglund</strong> (Lee &amp; Assoc)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(510) 324-8800</div>
+                <div>(909) 989-7771</div>
+                <div class="text-blue-400">mchavez@lee-assoc.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">40' clear West Coast flagship DC; VNA &amp; high-bay selective racking</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold">3.95 HIGH</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/4/4/5/3]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">WebstaurantStore (Clark Associates)</div>
+                <div class="text-slate-400">Majestic Reno Commercenter III, Reno / Sparks, NV 89434</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-purple-300">NV - Reno</div>
+                <div>692,000 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Brian Armon</strong> (NAI Alliance — Tenant Rep)<br/>
+                <strong>Eric Bennett</strong> (CBRE) · <strong>Clark Associates Distribution Ops</strong>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(717) 392-7550</div>
+                <div>(775) 336-4600</div>
+                <div class="text-blue-400">barmon@naialliance.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">692K SF foodservice equipment DC; multi-level pick modules &amp; cantilever</td>
+            </tr>
+
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3.5 px-4 font-mono">
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold">3.90 HIGH</span>
+                <div class="text-[10px] text-slate-400 mt-1">[4/5/5/4/2]</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="font-bold text-white">Retail Display Mfg — 2640 E Del Amo</div>
+                <div class="text-slate-400">2640 E Del Amo Blvd, Carson, CA 90810</div>
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div class="text-blue-300">CA - South Bay</div>
+                <div>110,720 SF</div>
+              </td>
+              <td class="py-3.5 px-4">
+                <strong>Matt Stringfellow, SIOR &amp; Tyler Rollema</strong><br/>
+                (Principals, The Klabin Company / CORFAC Int'l)
+              </td>
+              <td class="py-3.5 px-4 font-mono">
+                <div>(310) 329-9000</div>
+                <div class="text-blue-400">matts@klabin.com</div>
+                <div class="text-blue-400">tylerr@klabin.com</div>
+              </td>
+              <td class="py-3.5 px-4 text-slate-300">Cantilever racking for extrusion/sheet stock + selective finished-goods rack</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800/80 py-6 px-6 text-center text-xs text-slate-500">
+    McMurray Stern · 15020 Marquardt Ave, Santa Fe Springs, CA 90670 · MCS Project Scout &amp; Warehouse Lead Engine Team Guide
+  </footer>
+
+  <script>
+    function switchSection(section) {
+      const sections = ['steps', 'features', 'scoring', 'directory'];
+      const tabs = ['all', 'steps', 'features', 'scoring', 'directory'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (btn) btn.classList.toggle('active', t === section);
+      });
+      sections.forEach(s => {
+        const el = document.getElementById('sec-' + s);
+        if (el) {
+          el.style.display = (section === 'all' || section === s) ? 'block' : 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

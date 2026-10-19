@@ -12,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent
 LEADS_FILE = BASE_DIR / "leads.json"
 PIPELINE_TASKS_FILE = BASE_DIR / "lead_pipeline_tasks.json"
 INDEX_FILE = BASE_DIR / "index.html"
+GUIDE_FILE = BASE_DIR / "guide.html"
 
 app = FastAPI(title="MCS Project Scout & Warehouse Lead Engine")
 
@@ -38,6 +39,11 @@ LEADS_DB = load_leads_db()
 @app.get("/")
 async def index():
     return FileResponse(INDEX_FILE)
+
+
+@app.get("/guide")
+async def team_guide():
+    return FileResponse(GUIDE_FILE)
 
 
 @app.get("/healthz")
