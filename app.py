@@ -42,6 +42,7 @@ async def index():
 
 
 @app.get("/guide")
+@app.get("/guide.html")
 async def team_guide():
     return FileResponse(GUIDE_FILE)
 
