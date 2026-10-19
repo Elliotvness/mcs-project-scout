@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: mcs-lead-scout
+    name: mcs-project-scout
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
