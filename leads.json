@@ -50,7 +50,7 @@
     "filing_date": "2026-10-01",
     "target_date": "2026-10-31",
     "notes": "CCPA/CPRA Note: Sourced from Citybiz / DAUM Commercial press release. Reminder: Submit Chino Valley Fire District PRA request for 16380 Euclid Ave High-Piled Combustible Storage plans.",
-    "weighted_total_score": 4.8,
+    "weighted_total_score": 4.85,
     "priority_level": "Urgent",
     "score_breakdown": {
       "recency": 5,
@@ -58,7 +58,8 @@
       "new_space": 5,
       "growth": 5,
       "reachability": 5
-    }
+    },
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-SFS-LIONEXT-01",
@@ -111,7 +112,7 @@
     "filing_date": "2026-09-18",
     "target_date": "2026-11-01",
     "notes": "CCPA/CPRA Note: Contact details & broker route sourced from public REBusiness Online publication. Reminder: Check City of Santa Fe Springs Public Records Act (PRA) for High-Piled Combustible Storage permit filing.",
-    "weighted_total_score": 4.7,
+    "weighted_total_score": 4.8,
     "priority_level": "Urgent",
     "score_breakdown": {
       "recency": 4,
@@ -119,7 +120,59 @@
       "new_space": 5,
       "growth": 5,
       "reachability": 5
-    }
+    },
+    "last_verified_at": "2026-10-21T22:38:19Z"
+  },
+  {
+    "id": "CRE-LIVE-89195",
+    "company_name": "TSMC Supply Chain Occupier \u2014 2520 E Rose Garden Ln (Deer Valley)",
+    "lifecycle": "NEW_CONSTRUCTION",
+    "source": "REBusiness Online (Live RSS)",
+    "source_reference": "2026-10-21",
+    "source_url": "https://rebusinessonline.com/daum-negotiates-10-6m-sale-of-industrial-building-in-phoenix/",
+    "address": "2520 E Rose Garden Lane (Deer Valley Submarket), Phoenix, AZ 85050",
+    "city": "Phoenix",
+    "county": "Maricopa County",
+    "state": "AZ",
+    "lat": 33.6766,
+    "lon": -112.027,
+    "lead_status": "Not contacted",
+    "filing_date": "2026-10-21",
+    "target_date": "Immediate / Q1 Move-In",
+    "sq_ft": 43338,
+    "clear_height_ft": 28,
+    "raw_work_desc": "DAUM Commercial negotiated the $10.56M acquisition of a 43,338 SF freestanding climate-controlled industrial & manufacturing facility at 2520 E Rose Garden Ln in Deer Valley supporting the TSMC North Phoenix supply chain ecosystem.",
+    "summary_info": "New $10.56M acquisition of 43,338 SF freestanding industrial facility at 2520 E Rose Garden Ln, Deer Valley / Phoenix, AZ. High-tech TSMC semiconductor supply chain fit for Vertical Lift Modules (VLMs), cleanroom-grade static-dissipative shelving, and selective pallet rack.",
+    "valuation": 10560000,
+    "primary_product": "Vertical Lift Modules (VLMs) & Selective Pallet Rack",
+    "score": "TIER_1_HOT",
+    "score_rate": 88,
+    "score_grade": "A",
+    "weighted_total_score": 4.25,
+    "priority_level": "Urgent",
+    "score_breakdown": {
+      "recency": 5,
+      "size_fit": 3,
+      "new_space": 5,
+      "growth": 5,
+      "reachability": 4
+    },
+    "score_reasons": [
+      "Weighted Score: 4.55/5.00 \u2014 Newly published 100,000 SF industrial signal",
+      "Source: REBusiness Online"
+    ],
+    "est_pallet_positions": 1275,
+    "est_bay_count": 128,
+    "est_budget_min": 104600,
+    "est_budget_max": 137700,
+    "contact_name": "Trevor McKendry, Chris Rogers & Parker Houston (DAUM Phoenix)",
+    "contact_title": "Executive Vice Presidents \u2014 DAUM Commercial Phoenix (Source: REBusiness Online / Citybiz)",
+    "contact_phone": "(602) 957-7300",
+    "contact_email": "tmckendry@daumcommercial.com / crogers@daumcommercial.com",
+    "contractor_or_applicant": "Brokers: Trevor McKendry, Chris Rogers, Parker Houston & Nick Reinhardt (DAUM Commercial Phoenix)",
+    "contact_linkedin_query": "Trevor McKendry DAUM Commercial Phoenix OR Chris Rogers DAUM Phoenix",
+    "date_discovered": "2026-10-21T22:38:19.781710+00:00",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-SB-DCW-02",
@@ -171,7 +224,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-12",
     "target_date": "2026-11-02",
-    "notes": "CCPA/CPRA Note: Broker & transaction details published via DAUM Commercial & REBusiness Online. Reminder: File PRA request for LA County Fire High-Piled Storage submittal at 3040 E Ana St."
+    "notes": "CCPA/CPRA Note: Broker & transaction details published via DAUM Commercial & REBusiness Online. Reminder: File PRA request for LA County Fire High-Piled Storage submittal at 3040 E Ana St.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-OC-ANDURIL-04",
@@ -223,7 +277,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-20",
     "target_date": "2026-11-04",
-    "notes": "CCPA/CPRA Note: Sourced from public REBusiness Online publication. High-security defense manufacturing buildout in Tustin."
+    "notes": "CCPA/CPRA Note: Sourced from public REBusiness Online publication. High-security defense manufacturing buildout in Tustin.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-OC-HYPER-05",
@@ -275,7 +330,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-20",
     "target_date": "2026-11-05",
-    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online Orange County industrial report."
+    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online Orange County industrial report.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-AZ-PARTSTOWN-06",
@@ -327,7 +383,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-15",
     "target_date": "2026-11-08",
-    "notes": "CCPA/CPRA Note: Sourced from Connect CRE & AZ Big Media coverage."
+    "notes": "CCPA/CPRA Note: Sourced from Connect CRE & AZ Big Media coverage.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24010-10000-03793",
@@ -380,7 +437,8 @@
     "date_discovered": "2026-10-19T16:07:44.744423",
     "notes": "Use: Warehouse. Filing date: 2024-09-11",
     "filing_date": "2024-09-11",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25010-20000-01463",
@@ -433,7 +491,8 @@
     "date_discovered": "2026-10-19T16:07:44.744258",
     "notes": "Use: Warehouse. Filing date: 2025-04-07",
     "filing_date": "2025-04-07",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-NV-ALPLA-07",
@@ -485,7 +544,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-10",
     "target_date": "2026-11-12",
-    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online publication."
+    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online publication.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-SB-CARSON-08",
@@ -537,7 +597,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-09-05",
     "target_date": "2026-11-10",
-    "notes": "CCPA/CPRA Note: Sourced from Connect CRE. Reminder: Check LA County Fire High-Piled Storage PRA filings for 2640 E. Del Amo Blvd."
+    "notes": "CCPA/CPRA Note: Sourced from Connect CRE. Reminder: Check LA County Fire High-Piled Storage PRA filings for 2640 E. Del Amo Blvd.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-IE-KEECO-09",
@@ -589,7 +650,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-08-28",
     "target_date": "2026-11-15",
-    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online."
+    "notes": "CCPA/CPRA Note: Sourced from REBusiness Online.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "CRE-NV-WEBSTAURANT-10",
@@ -641,7 +703,8 @@
     "date_discovered": "2026-10-19T10:54:00",
     "filing_date": "2026-08-22",
     "target_date": "2026-11-18",
-    "notes": "CCPA/CPRA Note: Sourced from Connect CRE."
+    "notes": "CCPA/CPRA Note: Sourced from Connect CRE.",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24010-10000-03711",
@@ -694,7 +757,8 @@
     "date_discovered": "2026-10-19T16:07:44.744461",
     "notes": "Use: Warehouse. Filing date: 2024-09-09",
     "filing_date": "2024-09-09",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "GOV-CAMP-PEND-2026",
@@ -747,7 +811,8 @@
     "date_discovered": "2026-10-19T16:07:45.964479",
     "notes": "Solicitation W912HZ-26-R-0042. Formal bidding process.",
     "filing_date": "2026-10-15",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "GOV-LAPD-EVID-2026",
@@ -800,7 +865,8 @@
     "date_discovered": "2026-10-19T16:07:45.964506",
     "notes": "Solicitation LAPD-EV-26-09. Formal bidding process.",
     "filing_date": "2026-10-15",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24014-30000-03727",
@@ -853,7 +919,8 @@
     "date_discovered": "2026-10-19T16:07:44.744612",
     "notes": "Use: Warehouse. Filing date: 2024-08-21",
     "filing_date": "2024-08-21",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25016-10000-30303",
@@ -906,7 +973,8 @@
     "date_discovered": "2026-10-19T16:07:44.744113",
     "notes": "Use: Warehouse. Filing date: 2025-10-14",
     "filing_date": "2025-10-14",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "GOV-MARCH-ARB-2026",
@@ -958,7 +1026,8 @@
     "date_discovered": "2026-10-19T16:07:45.964519",
     "notes": "Solicitation FA6606-26-Q-0112. Formal bidding process.",
     "filing_date": "2026-10-15",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "GOV-OCPW-2026",
@@ -1011,7 +1080,8 @@
     "date_discovered": "2026-10-19T16:07:45.964493",
     "notes": "Solicitation OCPW-RFP-2026-881. Formal bidding process.",
     "filing_date": "2026-10-15",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-361",
@@ -1063,7 +1133,8 @@
     "date_discovered": "2026-10-19T16:07:45.960111",
     "notes": "Facility exit: Closure Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-09",
-    "target_date": "2026-10-30"
+    "target_date": "2026-10-30",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-356",
@@ -1115,7 +1186,8 @@
     "date_discovered": "2026-10-19T16:07:45.960527",
     "notes": "Facility exit: Closure Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-08",
-    "target_date": "2026-10-30"
+    "target_date": "2026-10-30",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-334",
@@ -1167,7 +1239,8 @@
     "date_discovered": "2026-10-19T16:07:45.961588",
     "notes": "Facility exit: Closure Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-09-30",
-    "target_date": "2026-10-30"
+    "target_date": "2026-10-30",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25016-20000-13387",
@@ -1220,7 +1293,8 @@
     "date_discovered": "2026-10-19T16:07:44.744228",
     "notes": "Use: Warehouse. Filing date: 2025-04-28",
     "filing_date": "2025-04-28",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-22010-20005-00615",
@@ -1272,7 +1346,8 @@
     "date_discovered": "2026-10-19T16:07:44.743883",
     "notes": "Use: Warehouse. Filing date: 2026-01-16",
     "filing_date": "2026-01-16",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-365",
@@ -1324,7 +1399,8 @@
     "date_discovered": "2026-10-19T16:07:45.959981",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-13",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-357",
@@ -1376,7 +1452,8 @@
     "date_discovered": "2026-10-19T16:07:45.960624",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-07",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-355",
@@ -1428,7 +1505,8 @@
     "date_discovered": "2026-10-19T16:07:45.960715",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-06",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-350",
@@ -1480,7 +1558,8 @@
     "date_discovered": "2026-10-19T16:07:45.960807",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-05",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-354",
@@ -1532,7 +1611,8 @@
     "date_discovered": "2026-10-19T16:07:45.961412",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-10-01",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "warn-319",
@@ -1584,7 +1664,8 @@
     "date_discovered": "2026-10-19T16:07:45.962284",
     "notes": "Facility exit: Layoff Permanent. Teardown / Used rack buyout / Incoming tenant lead.",
     "filing_date": "2026-09-29",
-    "target_date": "2026-11-10"
+    "target_date": "2026-11-10",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-26016-20000-15856",
@@ -1636,7 +1717,8 @@
     "date_discovered": "2026-10-19T16:07:44.74378",
     "notes": "Use: Warehouse. Filing date: 2026-06-15",
     "filing_date": "2026-06-15",
-    "target_date": "2026-10-30"
+    "target_date": "2026-10-30",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-20000-30130",
@@ -1688,7 +1770,8 @@
     "date_discovered": "2026-10-19T16:07:44.744386",
     "notes": "Use: Warehouse. Filing date: 2024-09-20",
     "filing_date": "2024-09-20",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-23016-10002-07349",
@@ -1740,7 +1823,8 @@
     "date_discovered": "2026-10-19T16:07:44.74429",
     "notes": "Use: Warehouse. Filing date: 2025-01-24",
     "filing_date": "2025-01-24",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-10000-31603",
@@ -1792,7 +1876,8 @@
     "date_discovered": "2026-10-19T16:07:44.744364",
     "notes": "Use: Warehouse. Filing date: 2024-10-03",
     "filing_date": "2024-10-03",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-26016-20000-00860",
@@ -1845,7 +1930,8 @@
     "date_discovered": "2026-10-19T16:07:44.744016",
     "notes": "Use: Warehouse. Filing date: 2026-01-13",
     "filing_date": "2026-01-13",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25016-20000-31298",
@@ -1898,7 +1984,8 @@
     "date_discovered": "2026-10-19T16:07:44.744062",
     "notes": "Use: Warehouse. Filing date: 2025-10-20",
     "filing_date": "2025-10-20",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-20000-27360",
@@ -1951,7 +2038,8 @@
     "date_discovered": "2026-10-19T16:07:44.744527",
     "notes": "Use: Warehouse. Filing date: 2024-08-27",
     "filing_date": "2024-08-27",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25016-10000-30717",
@@ -2003,7 +2091,8 @@
     "date_discovered": "2026-10-19T16:07:44.744089",
     "notes": "Use: Warehouse. Filing date: 2025-10-15",
     "filing_date": "2025-10-15",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-22010-20004-00609",
@@ -2055,7 +2144,8 @@
     "date_discovered": "2026-10-19T16:07:44.743977",
     "notes": "Use: Warehouse. Filing date: 2026-01-14",
     "filing_date": "2026-01-14",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-23010-20003-04138",
@@ -2107,7 +2197,8 @@
     "date_discovered": "2026-10-19T16:07:44.744157",
     "notes": "Use: Warehouse. Filing date: 2025-06-11",
     "filing_date": "2025-06-11",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-20000-37810",
@@ -2159,7 +2250,8 @@
     "date_discovered": "2026-10-19T16:07:44.744326",
     "notes": "Use: Warehouse. Filing date: 2024-12-04",
     "filing_date": "2024-12-04",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-26020-40000-00318",
@@ -2211,7 +2303,8 @@
     "date_discovered": "2026-10-19T16:07:44.743857",
     "notes": "Use: Warehouse. Filing date: 2026-02-17",
     "filing_date": "2026-02-17",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-25016-20000-31726",
@@ -2263,7 +2356,8 @@
     "date_discovered": "2026-10-19T16:07:44.74404",
     "notes": "Use: Warehouse. Filing date: 2025-10-24",
     "filing_date": "2025-10-24",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-26016-10000-08926",
@@ -2315,7 +2409,8 @@
     "date_discovered": "2026-10-19T16:07:44.74383",
     "notes": "Use: Warehouse. Filing date: 2026-04-07",
     "filing_date": "2026-04-07",
-    "target_date": "2026-11-05"
+    "target_date": "2026-11-05",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-10000-22172",
@@ -2367,7 +2462,8 @@
     "date_discovered": "2026-10-19T16:07:44.744643",
     "notes": "Use: Warehouse. Filing date: 2024-07-11",
     "filing_date": "2024-07-11",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   },
   {
     "id": "permit-24016-10000-34630",
@@ -2419,6 +2515,7 @@
     "date_discovered": "2026-10-19T16:07:44.744345",
     "notes": "Use: Manufacturing. Filing date: 2024-10-29",
     "filing_date": "2024-10-29",
-    "target_date": "2026-11-20"
+    "target_date": "2026-11-20",
+    "last_verified_at": "2026-10-21T22:38:19Z"
   }
 ]
