@@ -1,29 +1,21 @@
 @echo off
-title MCS Lead Scout - Push to GitHub and Render
+title MCS Project Scout - Push to Cloud (GitHub Pages + Render)
 cd /d "%~dp0"
 echo ============================================================================
-echo   MCS Project Scout ^& Warehouse Lead Engine - Render Deployment Sync
+echo   MCS Project Scout ^& Warehouse Lead Engine - Cloud Sync
 echo ============================================================================
 echo.
-echo [1/3] Staging updated leads.json, lead_pipeline_tasks.json, index.html guide.html, app.py...
+echo [1/3] Staging updated files...
 git add app.py index.html guide.html leads.json lead_pipeline_tasks.json requirements.txt render.yaml .gitignore
-git commit -m "Update MCS Lead Scout: 10 verified industrial leads, 5-dim scoring, contact/date editor, CoStar/cold-storage purge" 2>nul
+git commit -m "Sync MCS Project Scout leads, contacts, and guide" 2>nul
 echo.
-echo [2/3] Pushing to GitHub (Elliotvness/mcs-lead-scout)...
-echo       (If prompted, sign into GitHub in the browser pop-up window)
+echo [2/3] Pushing to active Cloud Hosting (Elliotvness/mcs-project-scout ^& mcs-lead-scout)...
 git branch -M main
+git push -u new-cloud main --force
 git push -u origin main --force
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo [!] Push to Elliotvness/mcs-lead-scout failed or repo does not exist yet.
-    echo     If you need to create the repo first, open: https://github.com/new
-    echo     Name it: mcs-lead-scout
-    echo     Then re-run this script!
-    pause
-    exit /b 1
-)
 echo.
-echo [3/3] Successfully pushed to GitHub! Render will auto-deploy within ~60 seconds:
-echo       https://mcs-lead-scout.onrender.com
+echo [3/3] Successfully deployed! Live Cloud URLs (Never Suspended):
+echo       Dashboard:  https://elliotvness.github.io/mcs-project-scout/
+echo       Team Guide: https://elliotvness.github.io/mcs-project-scout/guide.html
 echo.
 pause
