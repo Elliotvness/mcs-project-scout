@@ -221,47 +221,27 @@ async def get_lead_dossier(lead_id: str):
 
     subject = lead.get("custom_email_subject") or f"Storage Optimization & Permitting Support — {addr} ({city})"
     email_body = lead.get("custom_email_body") or (
-        f"Hi {contact_name},
-
-"
+        f"Hi {contact_name},\n\n"
         f"I am reaching out from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs "
-        f"regarding the industrial facility at {addr} in {city}.
-
-"
+        f"regarding the industrial facility at {addr} in {city}.\n\n"
         f"As your team plans warehouse operations and space utilization for this location, we help operators and "
-        f"project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:
-
-"
+        f"project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:\n\n"
         f"• Complimentary Space Planning & CAD Design: Based on the facility's profile, our engineers prepared an initial "
-        f"{product} concept supporting ~{pallets:,} pallet positions across {bays:,} bays.
-"
+        f"{product} concept supporting ~{pallets:,} pallet positions across {bays:,} bays.\n"
         f"• Turnkey Code & Seismic Submittals: We handle PE-stamped ASCE 7-22 seismic engineering, NFPA 13 flue-space compliance, "
-        f"and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.
-"
+        f"and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.\n"
         f"• Single-Source Execution: From selective, push-back, and drive-in pallet racking to automated Vertical Lift Modules (VLMs), "
-        f"wire decking, and certified installation, we deliver on-schedule occupancy.
-
-"
+        f"wire decking, and certified installation, we deliver on-schedule occupancy.\n\n"
         f"I would welcome the opportunity to share our complimentary preliminary CAD layout for {addr} and align on your project timeline. "
-        f"Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?
-
-"
-        f"Best regards,
-
-"
-        f"McMurray Stern — Storage, Racking & Automation Solutions
-"
-        f"15511 Carmenita Rd, Santa Fe Springs, CA 90670
-"
+        f"Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?\n\n"
+        f"Best regards,\n\n"
+        f"McMurray Stern — Storage, Racking & Automation Solutions\n"
+        f"15511 Carmenita Rd, Santa Fe Springs, CA 90670\n"
         f"www.mcmurraystern.com"
     )
     phone_battlecard = lead.get("custom_phone_script") or (
-        f"OPENER: 'Hi {contact_name}, calling from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the facility at {addr} in {city}.'
-
-"
-        f"VALUE PROP: 'We partner with warehouse operators and project teams across {city} to deliver turnkey {product} systems, PE-stamped ASCE 7-22 seismic engineering, and Chapter 32 High-Piled Storage permit packages. Based on the building specs at {addr}, our engineers mapped a preliminary ~{pallets:,}-pallet concept across {bays:,} bays to help streamline plan check.'
-
-"
+        f"OPENER: 'Hi {contact_name}, calling from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the facility at {addr} in {city}.'\n\n"
+        f"VALUE PROP: 'We partner with warehouse operators and project teams across {city} to deliver turnkey {product} systems, PE-stamped ASCE 7-22 seismic engineering, and Chapter 32 High-Piled Storage permit packages. Based on the building specs at {addr}, our engineers mapped a preliminary ~{pallets:,}-pallet concept across {bays:,} bays to help streamline plan check.'\n\n"
         f"CALL TO ACTION: 'We would love to send over the complimentary CAD layout and schedule a brief 15-minute site walk or layout review this week—are you the best point of contact overseeing storage planning for {addr}?'"
     )
     linkedin_q = quote_plus(lead.get("contact_linkedin_query") or f"{company} {lead.get('contact_title', 'Director Logistics')} Southern California")
