@@ -198,43 +198,83 @@ async def get_lead_dossier(lead_id: str):
     bays = lead.get("est_bay_count") or 100
     product = lead.get("primary_product", "Selective Pallet Rack")
     contact_name = lead.get("contact_name") or "Operations / Supply Chain Lead"
-    filing_date = lead.get("filing_date") or "recent"
 
-    subject = f"Storage Optimization & Permitting Support — {addr} ({city})"
-    email_body = (
-        f"Hi {contact_name},\n\n"
+    subject = lead.get("custom_email_subject") or f"Storage Optimization & Permitting Support — {addr} ({city})"
+    email_body = lead.get("custom_email_body") or (
+        f"Hi {contact_name},
+
+"
         f"I am reaching out from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs "
-        f"regarding the industrial facility at {addr} in {city}.\n\n"
+        f"regarding the industrial facility at {addr} in {city}.
+
+"
         f"As your team plans warehouse operations and space utilization for this location, we help operators and "
-        f"project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:\n\n"
+        f"project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:
+
+"
         f"• Complimentary Space Planning & CAD Design: Based on the facility's profile, our engineers prepared an initial "
-        f"{product} concept supporting ~{pallets:,} pallet positions across {bays:,} bays.\n"
+        f"{product} concept supporting ~{pallets:,} pallet positions across {bays:,} bays.
+"
         f"• Turnkey Code & Seismic Submittals: We handle PE-stamped ASCE 7-22 seismic engineering, NFPA 13 flue-space compliance, "
-        f"and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.\n"
+        f"and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.
+"
         f"• Single-Source Execution: From selective, push-back, and drive-in pallet racking to automated Vertical Lift Modules (VLMs), "
-        f"wire decking, and certified installation, we deliver on-schedule occupancy.\n\n"
+        f"wire decking, and certified installation, we deliver on-schedule occupancy.
+
+"
         f"I would welcome the opportunity to share our complimentary preliminary CAD layout for {addr} and align on your project timeline. "
-        f"Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?\n\n"
-        f"Best regards,\n\n"
-        f"McMurray Stern — Storage, Racking & Automation Solutions\n"
-        f"15511 Carmenita Rd, Santa Fe Springs, CA 90670\n"
+        f"Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?
+
+"
+        f"Best regards,
+
+"
+        f"McMurray Stern — Storage, Racking & Automation Solutions
+"
+        f"15511 Carmenita Rd, Santa Fe Springs, CA 90670
+"
         f"www.mcmurraystern.com"
     )
-    phone_battlecard = (
-        f"OPENER: 'Hi {contact_name}, calling from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the facility at {addr} in {city}.'\n\n"
-        f"VALUE PROP: 'We partner with warehouse operators and project teams across {city} to deliver turnkey {product} systems, PE-stamped ASCE 7-22 seismic engineering, and Chapter 32 High-Piled Storage permit packages. Based on the building specs at {addr}, our engineers mapped a preliminary ~{pallets:,}-pallet concept across {bays:,} bays to help streamline plan check.'\n\n"
+    phone_battlecard = lead.get("custom_phone_script") or (
+        f"OPENER: 'Hi {contact_name}, calling from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the facility at {addr} in {city}.'
+
+"
+        f"VALUE PROP: 'We partner with warehouse operators and project teams across {city} to deliver turnkey {product} systems, PE-stamped ASCE 7-22 seismic engineering, and Chapter 32 High-Piled Storage permit packages. Based on the building specs at {addr}, our engineers mapped a preliminary ~{pallets:,}-pallet concept across {bays:,} bays to help streamline plan check.'
+
+"
         f"CALL TO ACTION: 'We would love to send over the complimentary CAD layout and schedule a brief 15-minute site walk or layout review this week—are you the best point of contact overseeing storage planning for {addr}?'"
     )
-    linkedin_q = quote_plus(f"{company} {lead.get('contact_title', 'Director Logistics')} Southern California")
+    linkedin_q = quote_plus(lead.get("contact_linkedin_query") or f"{company} {lead.get('contact_title', 'Director Logistics')} Southern California")
     return {
         "subject": subject,
         "email_body": email_body,
         "phone_battlecard": phone_battlecard,
         "linkedin_url": f"https://www.linkedin.com/search/results/people/?keywords={linkedin_q}",
+        "email_provenance": lead.get("email_provenance", "Published"),
+        "email_source_url": lead.get("email_source_url", lead.get("source_url")),
     }
 
 
-EXCLUDED_KEYWORDS = ("costar.com", "loopnet.com", "cold storage", "cold-storage", "freezer", "amazon.com", "amazon fulfillment")
+EXCLUDED_KEYWORDS = (
+    "costar.com",
+    "loopnet.com",
+    "cold storage",
+    "cold-storage",
+    "freezer",
+    "amazon.com",
+    "amazon fulfillment",
+    "amazon delivery",
+    "jackson walker",
+    "prusik",
+    "boca raton",
+    "shopping center",
+    "retail center",
+    "office park",
+    "office lease",
+    "office building",
+    "medical office",
+    "law firm",
+)
 TARGET_MARKETS = {
     "santa fe springs": ("Santa Fe Springs", "Los Angeles County", "CA", 33.9472, -118.0853),
     "commerce": ("Commerce", "Los Angeles County", "CA", 34.0006, -118.1598),
@@ -425,8 +465,11 @@ def fetch_live_cre_rss_leads(existing_urls: set, now_dt: datetime) -> list:
                 if not any(sig in blob for sig in ("lease", "distribution center", "fulfillment", "warehouse", "industrial")):
                     continue
                 matched_mkt = None
+                state_names = {"CA": "california|calif", "AZ": "arizona|ariz", "NV": "nevada|nev"}
                 for mkt_key, mkt_info in TARGET_MARKETS.items():
-                    if mkt_key in blob:
+                    st_code = mkt_info[2]
+                    st_pat = state_names.get(st_code, st_code.lower())
+                    if re.search(rf"\b{re.escape(mkt_key)}\b", blob) and re.search(rf"\b(?:{st_code.lower()}|{st_pat})\b", blob):
                         matched_mkt = mkt_info
                         break
                 if not matched_mkt:
