@@ -1529,9 +1529,9 @@
         const cname = lead.contact_name || 'Operations / Supply Chain Lead';
         const pallets = (lead.est_pallet_positions || 1000).toLocaleString();
         const bays = (lead.est_bay_count || 100).toLocaleString();
-        document.getElementById('emailSubject').value = `${lead.address} (${lead.city}) — Preliminary ${pallets}-Pallet CAD Layout & Ch. 32 Seismic Packet`;
-        document.getElementById('emailContentText').value = `Hi ${cname},\n\nOur engineering team at McMurray Stern (Santa Fe Springs HQ) noticed your ${lead.filing_date || 'recent'} activity at ${lead.address} in ${lead.city}.\n\nTo help streamline municipal building & California Chapter 32 High-Pile Combustible Storage (HPCS) plan check, we modeled a preliminary ${lead.primary_product} concept yielding ~${pallets} pallet positions across ${bays} bays (including California PE-stamped ASCE 7-22 seismic calculations and 87-layer AutoCAD submittals).\n\nAre you open to a quick 10-minute review of the preliminary CAD layout this week?\n\nBest regards,\nMcMurray Stern — Storage & Automation Engineering\n15020 Marquardt Ave, Santa Fe Springs, CA 90670`;
-        document.getElementById('phoneScriptText').innerText = `OPENER: "Hi ${cname}, calling from McMurray Stern in Santa Fe Springs regarding the warehouse project at ${lead.address} in ${lead.city}."\n\nHOOK: "We saw the ${lead.filing_date || 'recent'} filing (${lead.source_reference || 'N/A'}) and ran a preliminary ${pallets}-pallet ${lead.primary_product} layout with California Zone D/E seismic calcs so your team doesn't get delayed in Fire Marshal High-Pile plan check."\n\nASK: "Who is overseeing the rack layout and permitting timeline for ${lead.address}?"`;
+        document.getElementById('emailSubject').value = `Storage Optimization & Permitting Support — ${lead.address} (${lead.city})`;
+        document.getElementById('emailContentText').value = `Hi ${cname},\n\nI am reaching out from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the industrial facility at ${lead.address} in ${lead.city}.\n\nAs your team plans warehouse operations and space utilization for this location, we help operators and project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:\n\n• Complimentary Space Planning & CAD Design: Based on the facility's profile, our engineers prepared an initial ${lead.primary_product || 'Selective Pallet Rack'} concept supporting ~${pallets} pallet positions across ${bays} bays.\n• Turnkey Code & Seismic Submittals: We handle PE-stamped ASCE 7-22 seismic engineering, NFPA 13 flue-space compliance, and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.\n• Single-Source Execution: From selective, push-back, and drive-in pallet racking to automated Vertical Lift Modules (VLMs), wire decking, and certified installation, we deliver on-schedule occupancy.\n\nI would welcome the opportunity to share our complimentary preliminary CAD layout for ${lead.address} and align on your project timeline. Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?\n\nBest regards,\n\nMcMurray Stern — Storage, Racking & Automation Solutions\n15511 Carmenita Rd, Santa Fe Springs, CA 90670\nwww.mcmurraystern.com`;
+        document.getElementById('phoneScriptText').innerText = `OPENER: "Hi ${cname}, calling from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the facility at ${lead.address} in ${lead.city}."\n\nVALUE PROP: "We partner with warehouse operators and project teams across ${lead.city} to deliver turnkey ${lead.primary_product || 'Selective Pallet Rack'} systems, PE-stamped ASCE 7-22 seismic engineering, and Chapter 32 High-Piled Storage permit packages. Based on the building specs at ${lead.address}, our engineers mapped a preliminary ~${pallets}-pallet concept across ${bays} bays to help streamline plan check."\n\nCALL TO ACTION: "We would love to send over the complimentary CAD layout and schedule a brief 15-minute site walk or layout review this week—are you the best point of contact overseeing storage planning for ${lead.address}?"`;
         document.getElementById('btnLinkedInSearch').href = `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(lead.company_name + ' Logistics Southern California')}`;
       }
 
@@ -1723,19 +1723,25 @@
       const cname = lead.contact_name || 'Operations / Supply Chain Lead';
       const pallets = Number(lead.est_pallet_positions || 1000).toLocaleString();
       const bays = Number(lead.est_bay_count || 100).toLocaleString();
-      const defaultSubj = `${lead.address} (${lead.city}) — Preliminary ${pallets}-Pallet CAD Layout & Ch. 32 Seismic Packet`;
+      const defaultSubj = `Storage Optimization & Permitting Support — ${lead.address} (${lead.city})`;
       const defaultBody =
 `Hi ${cname},
 
-Our engineering team at McMurray Stern (Santa Fe Springs HQ) noticed your ${lead.filing_date || 'recent'} activity at ${lead.address} in ${lead.city}.
+I am reaching out from McMurray Stern's Storage & Automation Engineering team in Santa Fe Springs regarding the industrial facility at ${lead.address} in ${lead.city}.
 
-To help streamline municipal building & California Chapter 32 High-Pile Combustible Storage (HPCS) plan check, we modeled a preliminary ${lead.primary_product || 'Selective Pallet Rack'} concept yielding ~${pallets} pallet positions across ${bays} bays (including California PE-stamped ASCE 7-22 seismic calculations and 87-layer AutoCAD submittals).
+As your team plans warehouse operations and space utilization for this location, we help operators and project teams accelerate occupancy and maximize storage density while eliminating municipal permitting bottlenecks:
 
-Are you open to a quick 10-minute site walk or review of the preliminary CAD layout this week?
+• Complimentary Space Planning & CAD Design: Based on the facility's profile, our engineers prepared an initial ${lead.primary_product || 'Selective Pallet Rack'} concept supporting ~${pallets} pallet positions across ${bays} bays.
+• Turnkey Code & Seismic Submittals: We handle PE-stamped ASCE 7-22 seismic engineering, NFPA 13 flue-space compliance, and California Chapter 32 High-Piled Combustible Storage (HPCS) fire-marshal submittal packages from start to finish.
+• Single-Source Execution: From selective, push-back, and drive-in pallet racking to automated Vertical Lift Modules (VLMs), wire decking, and certified installation, we deliver on-schedule occupancy.
+
+I would welcome the opportunity to share our complimentary preliminary CAD layout for ${lead.address} and align on your project timeline. Would you have 15 minutes this Tuesday or Thursday for a brief introductory call or on-site walkthrough?
 
 Best regards,
-McMurray Stern — Storage & Automation Engineering
-15020 Marquardt Ave, Santa Fe Springs, CA 90670`;
+
+McMurray Stern — Storage, Racking & Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com`;
 
       const isCurrentActive = ACTIVE_LEAD && ACTIVE_LEAD.id === lead.id;
       const toField = isCurrentActive
