@@ -402,10 +402,6 @@
                   <i data-lucide="mail-plus" class="w-3.5 h-3.5"></i>
                   <span>Outlook App</span>
                 </button>
-                <button type="button" onclick="launchInRackStudio()" class="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-lg shadow-xs transition cursor-pointer flex items-center gap-1.5">
-                  <i data-lucide="boxes" class="w-3.5 h-3.5"></i>
-                  <span>Open in MCS Rack Studio</span>
-                </button>
                 <button type="button" onclick="saveLeadContactAndDates()" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg shadow-xs transition cursor-pointer flex items-center gap-1.5">
                   <i data-lucide="check" class="w-3.5 h-3.5"></i>
                   <span>Save Contact &amp; Dates</span>
@@ -1827,24 +1823,6 @@ www.mcmurraystern.com`;
     function sendActiveLeadOutlook(mode = 'web') {
       if (!ACTIVE_LEAD) return;
       sendViaOutlook(ACTIVE_LEAD.id, mode);
-    }
-
-    function launchInRackStudio() {
-      if (!ACTIVE_LEAD) return;
-      const ch = parseInt(document.getElementById('sliderHeight').value, 10) || ACTIVE_LEAD.clear_height_ft || 28;
-      const bays = parseInt((document.getElementById('drawerBaysVal').innerText || '24').replace(/,/g, ''), 10) || 24;
-      const rowCount = Math.max(2, Math.min(8, Math.round(bays / 24)));
-      const bayCount = Math.max(6, Math.min(24, Math.round(bays / (rowCount * 2))));
-      const params = new URLSearchParams({
-        projectId: ACTIVE_LEAD.id,
-        projectName: `${ACTIVE_LEAD.company_name} (${ACTIVE_LEAD.address})`,
-        clientCompany: ACTIVE_LEAD.company_name,
-        location: `${ACTIVE_LEAD.city}, CA`,
-        clearHeightFt: String(ch),
-        bayCount: String(bayCount),
-        rowCount: String(rowCount)
-      });
-      window.open(`../MCS-Rack-Automation/web_studio/html/Studio-Plan.html?${params.toString()}`, '_blank');
     }
 
     async function saveLeadStatus() {
