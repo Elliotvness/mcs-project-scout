@@ -88,7 +88,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-7">
         <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
           <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Verified Active Leads</span>
-          <span class="text-2xl font-extrabold text-white font-mono mt-1 block">46</span>
+          <span class="text-2xl font-extrabold text-white font-mono mt-1 block">48</span>
           <span class="text-[11px] text-emerald-400 font-medium">100% CoStar-Free &amp; Clean</span>
         </div>
         <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
@@ -103,7 +103,7 @@
         </div>
         <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
           <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Contact Coverage</span>
-          <span class="text-2xl font-extrabold text-blue-400 font-mono mt-1 block">46 / 46</span>
+          <span class="text-2xl font-extrabold text-blue-400 font-mono mt-1 block">48 / 48</span>
           <span class="text-[11px] text-slate-400 font-medium">Execs, Brokers &amp; LinkedIn</span>
         </div>
         <div class="bg-slate-950/70 border border-slate-800/90 rounded-2xl p-4">
@@ -136,7 +136,10 @@
         3. 5-Dimension Scoring &amp; Filtering Rules
       </button>
       <button onclick="switchSection('directory')" id="tab-directory" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
-        4. Top 10 Urgent Leads &amp; Contacts Cheat Sheet
+        4. Top Priority Leads &amp; Contacts Cheat Sheet
+      </button>
+      <button onclick="switchSection('marketing')" id="tab-marketing" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border border-slate-800 bg-slate-900 text-slate-300 transition cursor-pointer">
+        5. Marketing &amp; ABM Playbook
       </button>
     </div>
 
@@ -165,8 +168,8 @@
             Open the cloud dashboard at <a href="https://mcs-project-scout.onrender.com" target="_blank" class="text-blue-400 underline">mcs-project-scout.onrender.com</a> (or <a href="https://elliotvness.github.io/mcs-project-scout/" target="_blank" class="text-blue-400 underline">elliotvness.github.io/mcs-project-scout</a>) or run <code class="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300 font-mono">Start_Local_Server.bat</code> on your laptop (<code class="px-1.5 py-0.5 rounded bg-slate-800 text-blue-300 font-mono">http://localhost:8000</code>).
           </p>
           <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
-            <li><strong>Top KPI Ribbon:</strong> Instantly check total active projects (<span class="font-mono text-white">46</span>), estimated pipeline volume, total pallet positions, and Tier-1 Hot count.</li>
-            <li><strong>Offline Resilience:</strong> Even if opened directly from OneDrive (<code class="font-mono text-slate-200">index.html</code>) without internet, all 46 leads and contacts are embedded and load automatically.</li>
+            <li><strong>Top KPI Ribbon:</strong> Instantly check total active projects (<span class="font-mono text-white">48</span>), estimated pipeline volume, total pallet positions, and Tier-1 Hot count.</li>
+            <li><strong>Offline Resilience:</strong> Even if opened directly from OneDrive (<code class="font-mono text-slate-200">index.html</code>) without internet, all 48 leads and contacts are embedded and load automatically.</li>
             <li><strong>Rescan Button:</strong> Click <strong>Rescan</strong> in the top-right header to reload the latest <code class="font-mono text-slate-200">leads.json</code> feed into memory.</li>
           </ul>
         </div>
@@ -217,7 +220,7 @@
             Click any project card to open the <strong>Slide-Over Dossier Drawer</strong> and scroll to the <strong>Primary Decision-Maker &amp; Timeline</strong> panel:
           </p>
           <ul class="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
-            <li><strong>Pre-Populated Decision-Makers:</strong> All 46 projects include verified executive names (CEO, SVP Supply Chain, COO) and transaction brokers (DAUM, Lee &amp; Associates, CBRE, JLL, Klabin, Voit) with direct phones and emails.</li>
+            <li><strong>Pre-Populated Decision-Makers:</strong> All 48 projects include verified executive names (CEO, SVP Supply Chain, COO) and transaction brokers (DAUM, Lee &amp; Associates, CBRE, JLL, Klabin, Voit) with direct phones and emails.</li>
             <li><strong>Live Contact &amp; Date Editor:</strong> Update <em>Contact Name, Title, Company/Broker, Email, Phone, Filing/Lease Date,</em> or <em>Target Move-In Date</em> and click <strong>Save Contact &amp; Dates</strong>. Changes persist to the server (<code class="font-mono">leads.json</code>) and browser storage.</li>
             <li><strong>One-Click LinkedIn Lookup:</strong> Click <strong>Search Target on LinkedIn</strong> to launch a pre-filtered LinkedIn People search for that exact company and executive/broker.</li>
           </ul>
@@ -305,7 +308,7 @@
             <tr class="hover:bg-slate-800/40">
               <td class="py-3 px-4 font-bold text-white">5. Interactive Leaflet GIS Map</td>
               <td class="py-3 px-4 font-mono text-slate-400">Left Split-Pane</td>
-              <td class="py-3 px-4">Plots all 46 facilities with interactive markers; clicking a pin opens the project’s engineering &amp; sales dossier.</td>
+              <td class="py-3 px-4">Plots all 48 facilities with interactive markers; clicking a pin opens the project’s engineering &amp; sales dossier.</td>
               <td class="py-3 px-4 text-slate-300">Enables geographic territory routing and multi-stop site visit planning.</td>
             </tr>
             <tr class="hover:bg-slate-800/40">
@@ -752,6 +755,47 @@
       </div>
     </section>
 
+
+    <!-- ===================================================================== -->
+    <!-- SECTION E: MARKETING & ABM CAMPAIGN PLAYBOOK                          -->
+    <!-- ===================================================================== -->
+    <section id="sec-marketing" class="space-y-5 print-break">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400">Section 05 · Marketing &amp; Demand Generation</span>
+          <h3 class="text-xl font-extrabold text-white mt-0.5">Marketing Team Playbook: Account-Based Marketing (ABM) &amp; Campaign Execution</h3>
+        </div>
+        <span class="text-xs text-slate-400">How Marketing turns live industrial lease, permit, and relocation signals into high-converting campaigns</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-mono text-xs font-bold">PLAY 01 · LINKEDIN &amp; ABM ADS</span>
+          <h4 class="text-base font-bold text-white">Target Named Occupiers in the Day 0–60 Move-In Window</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Click <strong>Export CSV</strong> in the top header to download all 48 verified accounts with company names, cities, square footage, and decision-maker titles. Upload the list into <strong>LinkedIn Campaign Manager (Matched Audiences)</strong> or HubSpot to serve targeted ads to <em>VP of Supply Chain, Director of Facilities, Warehouse Managers, and Industrial Engineering</em> leads at companies actively fitting out new space (e.g., ViewSonic, Titanium Plus Auto Parts, Lionext, Anduril, Parts Town, Keeco).
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <span class="px-2.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold">PLAY 02 · LIFECYCLE CONTENT TRACKS</span>
+          <h4 class="text-base font-bold text-white">Match Collateral to the Exact Project Lifecycle Tab</h4>
+          <ul class="text-xs text-slate-300 space-y-2 list-disc pl-4">
+            <li><strong>New Leases &amp; Permits (<code class="font-mono text-emerald-300">NEW_CONSTRUCTION</code> / <code class="font-mono text-blue-300">BUILDING_PERMIT</code>):</strong> Lead with <em>Complimentary Space Planning &amp; CAD Layout</em> + <em>California Ch. 32 High-Piled Storage Permitting Checklist</em>.</li>
+            <li><strong>WARN Relocations (<code class="font-mono text-amber-300">FACILITY_RELOCATION</code>):</strong> Lead with <em>Turnkey Rack Decommissioning, Slab Anchor Restoration &amp; Relocation Services</em>.</li>
+            <li><strong>Gov / Defense (<code class="font-mono text-purple-300">GOVERNMENT_RFP</code>):</strong> Lead with <em>High-Density Mobile Shelving, Weapons/Armory Storage &amp; Automated VLMs</em>.</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <span class="px-2.5 py-1 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 font-mono text-xs font-bold">PLAY 03 · BROKER CO-MARKETING</span>
+          <h4 class="text-base font-bold text-white">Partner With Industrial Tenant-Rep Brokerage Teams</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Every lease card identifies the exact industrial brokerage team representing the tenant (<strong>DAUM Commercial, Lee &amp; Associates, CBRE, JLL, Newmark, Cushman &amp; Wakefield, Voit, The Klabin Co.</strong>). Marketing can run a dedicated <em>"Broker Fast-Track Permitting Partner"</em> nurture campaign positioning McMurray Stern as the local Santa Fe Springs engineering partner that gets their clients through High-Piled Storage plan check without delays.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t border-slate-800/80 py-6 px-6 text-center text-xs text-slate-500">
@@ -760,8 +804,8 @@
 
   <script>
     function switchSection(section) {
-      const sections = ['steps', 'features', 'scoring', 'directory'];
-      const tabs = ['all', 'steps', 'features', 'scoring', 'directory'];
+      const sections = ['steps', 'features', 'scoring', 'directory', 'marketing'];
+      const tabs = ['all', 'steps', 'features', 'scoring', 'directory', 'marketing'];
       tabs.forEach(t => {
         const btn = document.getElementById('tab-' + t);
         if (btn) btn.classList.toggle('active', t === section);
