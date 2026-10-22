@@ -89,6 +89,72 @@ async def update_lead_contact_and_dates(lead_id: str, request: Request):
     return JSONResponse({"ok": False, "error": "Lead not found"}, status_code=404)
 
 
+@app.post("/api/leads/{lead_id}/send-outlook")
+async def send_lead_via_outlook(lead_id: str, request: Request):
+    lead = next((l for l in LEADS_DB if l.get("id") == lead_id), None)
+    if not lead:
+        return JSONResponse({"ok": False, "error": "Lead not found"}, status_code=404)
+
+    payload = await request.json()
+    dossier_resp = await get_lead_dossier(lead_id)
+    default_subj = dossier_resp.get("subject", "") if isinstance(dossier_resp, dict) else ""
+    default_body = dossier_resp.get("email_body", "") if isinstance(dossier_resp, dict) else ""
+
+    to_email = (payload.get("to") or lead.get("contact_email") or "").strip()
+    cc_email = (payload.get("cc") or "").strip()
+    subject = (payload.get("subject") or default_subj).strip()
+    body = (payload.get("body") or default_body).strip()
+    auto_send = bool(payload.get("auto_send", False))
+
+    # Automatically mark lead as CONTACTED
+    lead["lead_status"] = "CONTACTED"
+    if to_email and not lead.get("contact_email"):
+        lead["contact_email"] = to_email
+    save_leads_db(LEADS_DB)
+
+    outlook_web_url = (
+        "https://outlook.office.com/mail/deeplink/compose?"
+        f"to={urllib.parse.quote(to_email)}"
+        f"&cc={urllib.parse.quote(cc_email)}"
+        f"&subject={urllib.parse.quote(subject)}"
+        f"&body={urllib.parse.quote(body)}"
+    )
+    mailto_url = (
+        f"mailto:{urllib.parse.quote(to_email)}?"
+        f"cc={urllib.parse.quote(cc_email)}"
+        f"&subject={urllib.parse.quote(subject)}"
+        f"&body={urllib.parse.quote(body)}"
+    )
+
+    com_launched = False
+    if os.name == "nt" and payload.get("use_com"):
+        try:
+            import subprocess
+            action_cmd = "$mail.Send();" if auto_send else "$mail.Display($true);"
+            ps_script = (
+                "$ol = New-Object -ComObject Outlook.Application; "
+                "$mail = $ol.CreateItem(0); "
+                f"$mail.To = '{to_email.replace(chr(39), chr(39)*2)}'; "
+                f"$mail.CC = '{cc_email.replace(chr(39), chr(39)*2)}'; "
+                f"$mail.Subject = '{subject.replace(chr(39), chr(39)*2)}'; "
+                f"$mail.Body = '{body.replace(chr(39), chr(39)*2)}'; "
+                + action_cmd
+            )
+            subprocess.Popen(["powershell", "-NoProfile", "-Command", ps_script])
+            com_launched = True
+        except Exception:
+            com_launched = False
+
+    return {
+        "ok": True,
+        "lead_id": lead_id,
+        "status": "CONTACTED",
+        "com_launched": com_launched,
+        "outlook_web_url": outlook_web_url,
+        "mailto_url": mailto_url,
+    }
+
+
 @app.post("/api/leads/{lead_id}/status")
 async def update_lead_status(lead_id: str, request: Request):
     payload = await request.json()

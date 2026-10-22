@@ -393,7 +393,15 @@
                 <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">Project Contacts &amp; Key Dates</span>
                 <span id="contactSaveToast" class="hidden text-[11px] font-bold text-emerald-600 dark:text-emerald-400">✓ Saved</span>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <button type="button" onclick="sendActiveLeadOutlook('web')" title="Compose tailored email in Outlook 365 Web" class="px-3 py-1.5 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-lg shadow-xs transition cursor-pointer flex items-center gap-1.5">
+                  <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                  <span>Email in Outlook 365</span>
+                </button>
+                <button type="button" onclick="sendActiveLeadOutlook('desktop')" title="Open tailored email in Outlook Desktop App" class="px-2.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-lg shadow-xs transition cursor-pointer flex items-center gap-1.5">
+                  <i data-lucide="mail-plus" class="w-3.5 h-3.5"></i>
+                  <span>Outlook App</span>
+                </button>
                 <button type="button" onclick="launchInRackStudio()" class="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-lg shadow-xs transition cursor-pointer flex items-center gap-1.5">
                   <i data-lucide="boxes" class="w-3.5 h-3.5"></i>
                   <span>Open in MCS Rack Studio</span>
@@ -672,24 +680,43 @@
           </a>
         </div>
 
-        <!-- COLD EMAIL ASSET -->
+        <!-- COLD EMAIL ASSET + 1-CLICK MICROSOFT OUTLOOK DISPATCH -->
         <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 space-y-3 shadow-xs">
-          <div class="flex items-center justify-between">
+          <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4 text-blue-600 dark:text-blue-400"></i>
-              <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Tailored Executive Email</span>
+              <span class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">Tailored Executive Email &amp; Instant Outlook Dispatch</span>
+              <span id="outlookSentBadge" class="hidden text-[10px] px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 font-extrabold">✓ Launched in Outlook (Marked Contacted)</span>
             </div>
-            <button onclick="copyToClipboard('emailContentText')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200 dark:border-blue-800 text-xs font-bold transition cursor-pointer">
-              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Email
-            </button>
+            <div class="flex flex-wrap items-center gap-2">
+              <button type="button" onclick="sendActiveLeadOutlook('web')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold shadow-xs transition cursor-pointer">
+                <i data-lucide="send" class="w-3.5 h-3.5"></i> Send via Outlook 365 Web
+              </button>
+              <button type="button" onclick="sendActiveLeadOutlook('desktop')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-xs transition cursor-pointer">
+                <i data-lucide="mail-plus" class="w-3.5 h-3.5"></i> Open in Outlook App
+              </button>
+              <button type="button" onclick="copyToClipboard('emailContentText')" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/60 border border-blue-200 dark:border-blue-800 text-xs font-bold transition cursor-pointer">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Body
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">To (Recipient Email)</label>
+              <input type="email" id="emailRecipientTo" placeholder="decision.maker@company.com (or fill in Outlook)" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-800 dark:text-slate-100 mt-1 font-mono">
+            </div>
+            <div>
+              <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">CC (Optional Team / Engineering)</label>
+              <input type="text" id="emailRecipientCc" placeholder="estimating@mcmurraystern.com" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-800 dark:text-slate-100 mt-1 font-mono">
+            </div>
           </div>
           <div>
-            <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Subject Line</label>
-            <input type="text" id="emailSubject" readonly class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-800 dark:text-slate-100 mt-1 font-mono">
+            <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Subject Line (Editable)</label>
+            <input type="text" id="emailSubject" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-800 dark:text-slate-100 mt-1 font-mono">
           </div>
           <div>
-            <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Message Body</label>
-            <textarea id="emailContentText" rows="11" readonly class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-xs text-slate-700 dark:text-slate-200 font-mono mt-1 focus:outline-none"></textarea>
+            <label class="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Message Body (Editable)</label>
+            <textarea id="emailContentText" rows="11" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-3 text-xs text-slate-700 dark:text-slate-200 font-mono mt-1 focus:outline-none"></textarea>
           </div>
         </div>
 
@@ -1340,9 +1367,17 @@
                   </a>
                 ` : ''}
               </div>
-              <span class="text-blue-600 dark:text-blue-400 font-bold group-hover:translate-x-1 transition duration-150 inline-flex items-center gap-1 text-[11px]">
-                Deal Workspace <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </span>
+              <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
+                <button type="button" onclick="sendViaOutlook('${lead.id}', 'web', event)" title="Instant Email in Outlook 365 Web" class="px-2 py-1 rounded-md bg-sky-600 hover:bg-sky-700 text-white font-bold text-[10px] inline-flex items-center gap-1 shadow-xs transition cursor-pointer">
+                  <i data-lucide="send" class="w-3 h-3"></i> Outlook 365
+                </button>
+                <button type="button" onclick="sendViaOutlook('${lead.id}', 'desktop', event)" title="Open in Outlook Desktop App" class="px-2 py-1 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-bold text-[10px] inline-flex items-center gap-1 transition cursor-pointer">
+                  <i data-lucide="mail" class="w-3 h-3"></i> App
+                </button>
+                <span onclick="selectLead('${lead.id}')" class="text-blue-600 dark:text-blue-400 font-bold group-hover:translate-x-0.5 transition duration-150 inline-flex items-center gap-0.5 text-[11px] ml-1 cursor-pointer">
+                  Workspace <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </span>
+              </div>
             </div>
           </div>
         `;
@@ -1388,10 +1423,18 @@
               <div class="text-slate-800 dark:text-slate-200 font-semibold">${lead.source}</div>
               ${lead.source_url ? `<a href="${lead.source_url}" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 dark:text-blue-400 hover:underline text-[10px] font-bold">Open Filing &UpperRightArrow;</a>` : ''}
             </td>
-            <td class="p-3 text-right">
-              <button onclick="selectLead('${lead.id}')" class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-xs shadow-xs cursor-pointer">
-                Inspect
-              </button>
+            <td class="p-3 text-right" onclick="event.stopPropagation()">
+              <div class="inline-flex items-center justify-end gap-1.5">
+                <button type="button" onclick="sendViaOutlook('${lead.id}', 'web', event)" title="Send tailored email via Outlook 365 Web" class="px-2.5 py-1 bg-sky-600 hover:bg-sky-700 text-white rounded-lg font-bold text-[11px] shadow-xs cursor-pointer inline-flex items-center gap-1">
+                  <i data-lucide="send" class="w-3 h-3"></i> Outlook
+                </button>
+                <button type="button" onclick="sendViaOutlook('${lead.id}', 'desktop', event)" title="Open in Outlook Desktop App" class="px-2 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-[11px] shadow-xs cursor-pointer inline-flex items-center gap-1">
+                  <i data-lucide="mail" class="w-3 h-3"></i> App
+                </button>
+                <button type="button" onclick="selectLead('${lead.id}')" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-[11px] shadow-xs cursor-pointer">
+                  Inspect
+                </button>
+              </div>
             </td>
           </tr>
         `;
@@ -1431,6 +1474,12 @@
         document.getElementById('inputContactPhone').value = lead.contact_phone || '';
         document.getElementById('inputFilingDate').value = lead.filing_date || '';
         document.getElementById('inputTargetDate').value = lead.target_date || '';
+      }
+      if (document.getElementById('emailRecipientTo')) {
+        document.getElementById('emailRecipientTo').value = lead.contact_email || '';
+      }
+      if (document.getElementById('outlookSentBadge')) {
+        document.getElementById('outlookSentBadge').classList.add('hidden');
       }
 
       CURRENT_BASE_SQFT = lead.sq_ft || 45000;
@@ -1668,6 +1717,110 @@
       }
       sortAndRenderLeads();
       updateMapMarkers();
+    }
+
+    function buildLeadEmailPayload(lead) {
+      const cname = lead.contact_name || 'Operations / Supply Chain Lead';
+      const pallets = Number(lead.est_pallet_positions || 1000).toLocaleString();
+      const bays = Number(lead.est_bay_count || 100).toLocaleString();
+      const defaultSubj = `${lead.address} (${lead.city}) — Preliminary ${pallets}-Pallet CAD Layout & Ch. 32 Seismic Packet`;
+      const defaultBody =
+`Hi ${cname},
+
+Our engineering team at McMurray Stern (Santa Fe Springs HQ) noticed your ${lead.filing_date || 'recent'} activity at ${lead.address} in ${lead.city}.
+
+To help streamline municipal building & California Chapter 32 High-Pile Combustible Storage (HPCS) plan check, we modeled a preliminary ${lead.primary_product || 'Selective Pallet Rack'} concept yielding ~${pallets} pallet positions across ${bays} bays (including California PE-stamped ASCE 7-22 seismic calculations and 87-layer AutoCAD submittals).
+
+Are you open to a quick 10-minute site walk or review of the preliminary CAD layout this week?
+
+Best regards,
+McMurray Stern — Storage & Automation Engineering
+15020 Marquardt Ave, Santa Fe Springs, CA 90670`;
+
+      const isCurrentActive = ACTIVE_LEAD && ACTIVE_LEAD.id === lead.id;
+      const toField = isCurrentActive
+        ? ((document.getElementById('emailRecipientTo')?.value || document.getElementById('inputContactEmail')?.value || lead.contact_email || '').trim())
+        : (lead.contact_email || '').trim();
+      const ccField = isCurrentActive
+        ? ((document.getElementById('emailRecipientCc')?.value || '').trim())
+        : '';
+      const subjField = (isCurrentActive && document.getElementById('emailSubject')?.value)
+        ? document.getElementById('emailSubject').value.trim()
+        : defaultSubj;
+      const bodyField = (isCurrentActive && document.getElementById('emailContentText')?.value)
+        ? document.getElementById('emailContentText').value.trim()
+        : defaultBody;
+
+      return {
+        to: toField,
+        cc: ccField,
+        subject: subjField,
+        body: bodyField
+      };
+    }
+
+    async function sendViaOutlook(leadId, mode = 'web', ev = null) {
+      if (ev && typeof ev.stopPropagation === 'function') {
+        ev.stopPropagation();
+      }
+      const lead = (LEADS || []).find(l => l.id === leadId) || ACTIVE_LEAD;
+      if (!lead) return;
+
+      const payload = buildLeadEmailPayload(lead);
+
+      // Update status locally to CONTACTED & persist in localStorage
+      lead.lead_status = 'CONTACTED';
+      if (payload.to && !lead.contact_email) {
+        lead.contact_email = payload.to;
+      }
+      const ov = getLeadOverrides();
+      ov[lead.id] = Object.assign({}, ov[lead.id] || {}, {
+        lead_status: 'CONTACTED',
+        contact_email: lead.contact_email || null
+      });
+      localStorage.setItem(OVERRIDES_KEY, JSON.stringify(ov));
+
+      if (ACTIVE_LEAD && ACTIVE_LEAD.id === lead.id) {
+        const statusSel = document.getElementById('leadStatusSelect');
+        if (statusSel) statusSel.value = 'CONTACTED';
+        const badge = document.getElementById('outlookSentBadge');
+        if (badge) badge.classList.remove('hidden');
+      }
+
+      // Build deep links immediately so popup blockers never block the user click
+      const outlookWebUrl =
+        `https://outlook.office.com/mail/deeplink/compose?to=${encodeURIComponent(payload.to)}` +
+        (payload.cc ? `&cc=${encodeURIComponent(payload.cc)}` : '') +
+        `&subject=${encodeURIComponent(payload.subject)}` +
+        `&body=${encodeURIComponent(payload.body)}`;
+
+      const mailtoUrl =
+        `mailto:${encodeURIComponent(payload.to)}?` +
+        (payload.cc ? `cc=${encodeURIComponent(payload.cc)}&` : '') +
+        `subject=${encodeURIComponent(payload.subject)}` +
+        `&body=${encodeURIComponent(payload.body)}`;
+
+      if (mode === 'web') {
+        window.open(outlookWebUrl, '_blank', 'noopener');
+      } else {
+        window.location.href = mailtoUrl;
+      }
+
+      // Also notify backend /api/leads/{id}/send-outlook asynchronously
+      try {
+        await fetch(`/api/leads/${lead.id}/send-outlook`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (_) {}
+
+      sortAndRenderLeads();
+    }
+
+    function sendActiveLeadOutlook(mode = 'web') {
+      if (!ACTIVE_LEAD) return;
+      sendViaOutlook(ACTIVE_LEAD.id, mode);
     }
 
     function launchInRackStudio() {
