@@ -52,6 +52,26 @@ async def team_guide():
     return FileResponse(GUIDE_FILE)
 
 
+@app.get("/marketing-handoff")
+@app.get("/marketing-handoff.html")
+async def marketing_handoff():
+    return FileResponse(BASE_DIR / "marketing-handoff.html")
+
+
+@app.get("/mcs_verified_leads_marketing_handoff.csv")
+async def marketing_handoff_csv():
+    return FileResponse(
+        BASE_DIR / "mcs_verified_leads_marketing_handoff.csv",
+        media_type="text/csv",
+        filename="mcs_verified_leads_marketing_handoff.csv",
+    )
+
+
+@app.get("/leads.json")
+async def raw_leads_json():
+    return FileResponse(LEADS_FILE, media_type="application/json", filename="mcs_verified_leads.json")
+
+
 @app.get("/healthz")
 async def healthz():
     return {"status": "ok", "leads_count": len(LEADS_DB)}

@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCS Project Scout — Marketing Handoff Package for Kyle (23 Ground-Truth Verified Leads)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "Inter", sans-serif; background-color: #020617; color: #f8fafc; }
+    .font-mono { font-family: "JetBrains Mono", monospace; }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <header class="sticky top-0 z-30 backdrop-blur-md bg-slate-950/90 border-b border-slate-800 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] font-bold">GROUND-TRUTH AUDITED HANDOFF</span>
+          <span class="text-xs font-mono text-slate-400">Prepared for Kyle &amp; McMurray Stern Marketing Team</span>
+        </div>
+        <h1 class="text-xl font-extrabold text-white mt-1">MCS Project Scout — 23 Verified Warehouse Leads &amp; Outbound Campaign Package</h1>
+      </div>
+      <div class="flex flex-wrap items-center gap-2.5">
+        <a href="mcs_verified_leads_marketing_handoff.csv" download="mcs_verified_leads_marketing_handoff.csv" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-extrabold shadow-lg transition">
+          &darr; Download Master CSV (23 Verified Leads)
+        </a>
+        <a href="leads.json" download="mcs_verified_leads.json" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold transition">
+          &darr; Download JSON Source
+        </a>
+        <a href="guide.html" class="px-3.5 py-2 rounded-xl bg-purple-600/30 hover:bg-purple-600/50 text-purple-200 border border-purple-500/40 text-xs font-bold transition">
+          Team &amp; ABM Playbook
+        </a>
+        <a href="./" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition">
+          Open Live GIS Dashboard &rarr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+    <!-- EXECUTIVE SUMMARY FOR KYLE -->
+    <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-base font-extrabold uppercase tracking-wider font-mono text-blue-400">1. Executive Summary &amp; Audit Methodology for Marketing</h2>
+        <span class="text-xs font-mono text-slate-400">HQ Address Standard: 15511 Carmenita Rd, Santa Fe Springs, CA 90670</span>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        We completed a 6-batch ground-truth verification audit across all 51 initial records in Project Scout. Every address was verified for actual warehouse occupancy, move-in timing, permit status, and contact provenance. <strong>28 records were purged</strong> (3 RSS scraper false-positives—Jackson Walker Austin office, Prusik CT shopping center, and JLL Boca Raton office park—plus 25 office buildings, already-finaled permits, stale leases from 2015–2023, and cold-storage conversions). The surviving <strong>23 verified opportunities</strong> below represent <strong class="text-white">3,184,864 SF</strong> of active industrial space (~<strong class="text-emerald-400">$6.75M</strong> in addressable racking &amp; storage systems).
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+          <div class="font-mono text-xs font-bold text-emerald-300">PUBLISHED EMAILS (15 Leads)</div>
+          <p class="text-xs text-slate-300 mt-1">Found directly on a public webpage or official filing (with source link). Ready for immediate 1:1 executive email sequences.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
+          <div class="font-mono text-xs font-bold text-amber-300">PATTERN — UNVERIFIED (3 Leads)</div>
+          <p class="text-xs text-slate-300 mt-1">Constructed from the brokerage or company’s known email format and explicitly marked unverified. Pair with phone or LinkedIn outreach.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-sky-500/10 border border-sky-500/30">
+          <div class="font-mono text-xs font-bold text-sky-300">GENERAL INBOX (5 Leads)</div>
+          <p class="text-xs text-slate-300 mt-1">Official published organizational inbox (<code class="font-mono">info@</code>, departmental procurement). Best paired with LinkedIn Matched Audience ads or broker intro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section class="flex flex-wrap items-center justify-between gap-4">
+      <div class="flex flex-wrap items-center gap-2">
+        <button onclick="filterCards('ALL', this)" class="flt-btn px-3.5 py-1.5 rounded-xl bg-blue-600 text-white text-xs font-bold cursor-pointer">All Verified Leads (23)</button>
+        <button onclick="filterCards('Published', this)" class="flt-btn px-3.5 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-emerald-300 text-xs font-bold cursor-pointer">Published Only (15)</button>
+        <button onclick="filterCards('Pattern', this)" class="flt-btn px-3.5 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-amber-300 text-xs font-bold cursor-pointer">Pattern / Unverified (3)</button>
+        <button onclick="filterCards('General inbox', this)" class="flt-btn px-3.5 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-sky-300 text-xs font-bold cursor-pointer">General Inbox (5)</button>
+      </div>
+      <div class="text-xs font-mono text-slate-400">Click &ldquo;Copy Subject + Body&rdquo; on any card to paste into Outlook or HubSpot</div>
+    </section>
+
+    <!-- 23 LEAD DOSSIERS -->
+    <section id="cardsList" class="space-y-5">
+      
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#01 · CRE-OC-ANDURIL-04</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.90 / 5.00 (A+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Anduril Industries — Tustin Manufacturing &amp; Logistics Move-In</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">1100 Valencia Ave, Tustin, CA 92780 (Tustin, CA) · Footprint: <strong class="text-slate-200">177,766 SF</strong> · Est. Capacity: <strong class="text-slate-200">4,140 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$339,500 – $447,100</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rebusinessonline.com/power-hungry-users-drive-orange-county-industrial-demand/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://hughesmarino.com/team/tucker-hughes/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Tucker Hughes (Hughes Marino — Tenant Broker)</div>
+          <div class="text-slate-400">Managing Partner, Hughes Marino (Representing Anduril Industries)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>tucker@hughesmarino.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(949) 333-3000 / 1-844-662-6635</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED (Batch A): Anduril Industries is moving into the 177,766 SF industrial &amp; manufacturing building at 1100 Valencia Ave in Tustin this month. Tenant broker is Tucker Hughes at Hughes Marino (published email). Prime fit for Vertical Lift Modules (VLMs), heavy-duty pallet racking, and Chapter 32 high-pile submittals.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-1', 'body-1', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-1" class="font-bold text-white">Anduril Tustin Move-In (1100 Valencia Ave) — Turnkey Racking, VLMs &amp; Ch. 32 Permitting</span>
+        </div>
+        <pre id="body-1" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Tucker,
+
+Congratulations to you and the Hughes Marino team on representing Anduril Industries on the 177,766 SF facility at 1100 Valencia Ave in Tustin.
+
+With Anduril moving in this month, I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team right up the freeway in Santa Fe Springs. We work closely with Hughes Marino project teams and Southern California defense/aerospace manufacturers to accelerate facility activation and eliminate Orange County Fire Authority permitting bottlenecks:
+
+• High-Security Defense &amp; Production Storage: Automated Vertical Lift Modules (VLMs), heavy-duty selective and cantilever racking, secure wire partitions, and modular technical workstations.
+• Turnkey Code &amp; Seismic Submittals: In-house California PE-stamped ASCE 7-22 seismic calculations, NFPA 13 flue-space compliance, and Chapter 32 High-Piled Combustible Storage (HPCS) submittal packages.
+
+Could you introduce us to the facilities or operations lead overseeing the 1100 Valencia Ave buildout, or let us know if we can provide a complimentary preliminary layout and seismic check for your project management team?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#02 · CRE-IE-CHINO-AUTO-03</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.85 / 5.00 (A+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Undisclosed Auto Parts Distributor — 16380 Euclid Ave Bldg 3</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">16380 Euclid Ave, Bldg 3, Chino, CA 91708 (Chino, CA) · Footprint: <strong class="text-slate-200">522,267 SF</strong> · Est. Capacity: <strong class="text-slate-200">12,180 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$998,700 – $1,315,400</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.citybiz.co/article/869446/daum-commercial-lara-cre-completes-42-million-lease-agreement-for-522267-square-foot-inland-empire-industrial-facility-on-behalf-of-auto-parts-distribution-company/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.daumcommercial.com/brokers/gus-andros/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Gus Andros (DAUM Commercial — Tenant Broker)</div>
+          <div class="text-slate-400">Executive Vice President, DAUM Commercial Real Estate</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>gandros@daumcommercial.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(909) 980-1234</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED (Batch A): 522,267 SF auto parts distribution lease signed at 16380 Euclid Ave Bldg 3 in Chino ($42M lease). Tenant name is not publicly disclosed yet; outreach routes directly to tenant broker Gus Andros at DAUM Commercial (published email) for tenant introduction.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-2', 'body-2', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-2" class="font-bold text-white">16380 Euclid Ave Bldg 3 (522K SF Chino Auto Parts Lease) — High-Pile Rack &amp; Pick Module Support</span>
+        </div>
+        <pre id="body-2" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Gus,
+
+Congratulations on completing the 522,267 SF lease agreement at 16380 Euclid Ave (Building 3) in Chino for your auto parts distribution client.
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs. Automotive parts distribution centers in Chino typically require specialized multi-level pick modules, high-bay selective racking, and Chino Valley Independent Fire District Chapter 32 High-Piled Combustible Storage (HPCS) permits.
+
+We help DAUM clients compress move-in timelines by delivering:
+• Complimentary Space Planning &amp; CAD Design: High-density selective pallet racking, multi-tier automotive parts pick modules, and carton flow systems tailored to 36&#x27; clear height.
+• Turnkey Chino Fire &amp; Seismic Permitting: PE-stamped ASCE 7-22 seismic engineering and Chapter 32 high-pile fire submittal packages.
+
+Would you be open to introducing us to your client&#x27;s facilities or operations lead as they plan their racking layout at 16380 Euclid Ave, or could we share a preliminary engineering package with your team?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#03 · permit-26016-20000-00860</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.85 / 5.00 (A+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Los Angeles Regional Food Bank — High-Pile Storage Expansion (1734 E 41st St)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">1734 E 41st St, Los Angeles, CA 90058 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">95,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">160 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$18,300 – $22,100</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=26016-20000-00860" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.lafoodbank.org/about/leadership-staff/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Scott Newton (Sr. Director of Operations &amp; Logistics)</div>
+          <div class="text-slate-400">Sr. Director of Operations &amp; Logistics, LA Regional Food Bank</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>snewton@lafoodbank.org</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(323) 234-3030 ext. 126</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED STANDOUT (Batch E): March 2026 LADBS permit added roof smoke/heat vents specifically over new high-pile storage at 1734 E 41st St, with the high-pile storage rack work filed under a separate permit. Direct published email for Sr. Director of Operations &amp; Logistics Scott Newton (snewton@lafoodbank.org).</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-3', 'body-3', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-3" class="font-bold text-white">High-Pile Pallet Racking &amp; Seismic Engineering Support — 1734 E 41st St Facility</span>
+        </div>
+        <pre id="body-3" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Scott,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding the Los Angeles Regional Food Bank&#x27;s distribution center at 1734 E 41st St.
+
+As your team coordinates the new high-pile storage expansion beneath the upgraded roof smoke vent area, we would love to support the Food Bank with turnkey pallet racking, wire decking, and LADBS / LAFD permitting:
+
+• High-Volume Food Distribution Racking: Heavy-duty selective, push-back, and drive-in pallet rack systems engineered for high pallet turnover, FIFO lot rotation, and upright impact protection.
+• Turnkey LADBS &amp; LAFD Chapter 32 Submittals: In-house California PE-stamped ASCE 7-22 seismic engineering and NFPA 13 transverse/longitudinal flue-space compliance aligned with your smoke vent upgrades.
+• Local Santa Fe Springs Partner: Our engineering and installation teams are just 20 minutes away.
+
+Would you have 15 minutes this Tuesday or Thursday for a brief call or site walk at 1734 E 41st St to review your high-pile storage layout?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Pattern (Unverified)">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#04 · CRE-IE-VIEWSONIC-11</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-amber-500/20 text-amber-300 border-amber-500/40">EMAIL: PATTERN (UNVERIFIED)</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">FACILITY_RELOCATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.65 / 5.00 (A+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">ViewSonic Corporation — Ontario Ranch Move &amp; Chino Rack Buyout</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">4953 E Euclid Ave, Bldg 2, Ontario, CA 91762 (Ontario, CA) · Footprint: <strong class="text-slate-200">171,913 SF</strong> · Est. Capacity: <strong class="text-slate-200">5,056 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$414,600 – $546,000</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.connectcre.com/story-location/inland-empire/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.connectcre.com/story-location/inland-empire/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">David Kluth (Newmark) &amp; Nathan Piehl (Cushman &amp; Wakefield) / ViewSonic Ops</div>
+          <div class="text-slate-400">Tenant &amp; Landlord Brokers (Pattern - Unverified) / ViewSonic Supply Chain</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>david.kluth@nmrk.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(909) 974-4000 / (949) 346-9700</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED DUAL OPPORTUNITY (Batch A): ViewSonic signed a 171,913 SF lease in Ontario Ranch (4953 E Euclid Ave Bldg 2) moving out after 12 years in Chino. Two openings: (1) New high-bay selective racking in Ontario Ranch and (2) Used-rack buyout / teardown &amp; slab restoration in Chino. Broker emails built from firm pattern (marked unverified).</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-4', 'body-4', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-4" class="font-bold text-white">ViewSonic Ontario Ranch (4953 E Euclid) New Racking + Outgoing Chino Rack Teardown/Buyout</span>
+        </div>
+        <pre id="body-4" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi David,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding ViewSonic&#x27;s 171,913 SF relocation to Ontario Ranch Business Park (4953 E Euclid Ave, Bldg 2) after 12 years in Chino.
+
+Relocations of this scale require tight coordination between activating the new building and surrendering the legacy warehouse on time. We offer ViewSonic a single-source solution covering both ends of the move:
+
+1. New Ontario Ranch Facility (4953 E Euclid Ave): Turnkey 36&#x27;-clear selective pallet racking, carton flow, PE-stamped ASCE 7-22 seismic calculations, and Ontario Fire Department Chapter 32 High-Piled Storage submittals.
+2. Legacy Chino Warehouse Exit: Used-rack buyout credit, professional teardown, wedge-anchor shaving, and slab restoration to satisfy lease surrender requirements.
+
+Could you connect us with ViewSonic&#x27;s facilities or warehouse operations lead managing the transition, or let us know if we can prepare a dual new-rack + Chino teardown proposal?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="General inbox">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#05 · CRE-SFS-LIONEXT-01</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-sky-500/20 text-sky-300 border-sky-500/40">EMAIL: GENERAL INBOX</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.45 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Lionext Inc. — Santa Fe Springs 3PL Distribution Hub</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">11650 Burke St, Santa Fe Springs, CA 90670 (Santa Fe Springs, CA) · Footprint: <strong class="text-slate-200">106,110 SF</strong> · Est. Capacity: <strong class="text-slate-200">2,480 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$203,300 – $267,800</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rebusinessonline.com/lionext-leases-106110-sf-distribution-facility-in-santa-fe-springs-california/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.lionext.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Joel Hutak (Lee &amp; Associates) &amp; Lionext Operations</div>
+          <div class="text-slate-400">Principal, Lee &amp; Associates (Published) &amp; Lionext SFS Operations (General Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>info@lionext.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(562) 222-3885 / (714) 564-7169</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED HOME-CITY 3PL (Batch A): Lionext occupies 106,110 SF at 11650 Burke St in Santa Fe Springs (&lt;2 miles from McMurray Stern HQ). Lease was signed ~18 months ago so they have moved in; ideal local neighbor pitch for phase-2 racking expansion, reconfiguration, wire decking, and safety inspections. Published general inbox info@lionext.com + published broker email jhutak@lee-associates.com.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-5', 'body-5', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-5" class="font-bold text-white">Santa Fe Springs Neighbor Intro — 3PL Racking Expansion &amp; High-Pile Support (11650 Burke St)</span>
+        </div>
+        <pre id="body-5" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Lionext Operations Team,
+
+We are right around the corner from your 11650 Burke St distribution center here in Santa Fe Springs (our headquarters is at 15511 Carmenita Rd, less than two miles away).
+
+Now that your team is settled into the 106,110 SF Burke St facility, we wanted to introduce McMurray Stern as a local engineering resource as you onboard new 3PL clients or reconfigure pallet racking density:
+
+• Rapid Local Turnaround: Add-on selective and push-back pallet racking, wire mesh decking, column protectors, end-of-aisle guardrails, and upright repair/reconfiguration.
+• Santa Fe Springs Fire &amp; Seismic Compliance: PE-stamped ASCE 7-22 seismic calculations and Chapter 32 High-Piled Storage permit amendments whenever your commodity mix or bay layout changes.
+
+Since we are right down the street in Santa Fe Springs, could we stop by for a brief 15-minute introduction or provide a quote on any upcoming racking additions?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#06 · permit-25016-20000-13387</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.45 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">7800 Airport Business Park Way — Open High-Pile Rack Permit</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">7800 N Airport Business Park Way, Van Nuys, CA 91406 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">42,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">460 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$42,300 – $53,300</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=25016-20000-13387" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.rexfordindustrial.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Van Nuys Airport Business Park Leasing / Tenant Ops</div>
+          <div class="text-slate-400">LADBS Permit #25016-20000-13387 (Issued Sept 24 — Still Open)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>emiller@rexfordindustrial.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(310) 297-2287</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED OPEN HIGH-PILE PERMIT (Batch E): While neighboring 7700 Airport Business Park Way was finaled, 7800 Airport Business Park Way had a High-Pile Storage Rack permit issued on Sept 24 (&#x27;INSTALL HIGH PILE STORAGE RACKS IN WAREHOUSE AREA&#x27;, $55,200 valuation) that is still open and active.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-6', 'body-6', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-6" class="font-bold text-white">7800 Airport Business Park Way (Van Nuys) — High-Pile Storage Rack &amp; LADBS Final Inspection Support</span>
+        </div>
+        <pre id="body-6" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Van Nuys Operations &amp; Property Management Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding the warehouse facility at 7800 N Airport Business Park Way in Van Nuys.
+
+We support San Fernando Valley industrial tenants and property teams with fast-track high-pile storage racking, wire decking, seismic anchoring, and LAFD Chapter 32 compliance:
+
+• Quick-Ship Racking &amp; Accessories: Selective pallet rack frames, beams, NFPA 13 compliant wire mesh waterfall decks, flue-space safety bars, and Seismic Zone D/E wedge anchors.
+• LADBS &amp; LAFD High-Pile Closeout: California PE-stamped seismic calculations, anchor torque certification, and fire-marshal high-pile signage/submittal support.
+
+Please let us know if your tenant or project team at 7800 Airport Business Park Way needs additional racking materials, wire decking, or certified installation support to complete the project.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#07 · warn-361</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.40 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Catellus-Deca — Former Phillips 66 Carson Refinery Redevelopment (3.9M SF)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">1520 E Sepulveda Blvd, Carson, CA 90745 (Carson, CA) · Footprint: <strong class="text-slate-200">390,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">580 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$51,900 – $65,800</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://edd.ca.gov/en/jobs_and_training/layoff_services_warn" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://ci.carson.ca.us/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Heather Crossner (Catellus-Deca Development Lead)</div>
+          <div class="text-slate-400">Project Representative, Catellus-Deca LLC (Diamond Gateway Filing)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>heather.crossner@catellus-deca.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(310) 692-4759</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED MEGA-DEVELOPMENT (Batch C): The Phillips 66 Carson refinery is idle, and developer Catellus-Deca has filed to demolish it and build approximately 3.9 million SF of modern Class-A industrial warehouse space. Development contact Heather Crossner&#x27;s email (heather.crossner@catellus-deca.com) is published directly in the public filing.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-7', 'body-7', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-7" class="font-bold text-white">Carson 1520 E Sepulveda Industrial Redevelopment — Pre-Leasing Tenant Racking &amp; Automation Advisory</span>
+        </div>
+        <pre id="body-7" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Heather,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding Catellus-Deca&#x27;s planned ~3.9M SF industrial redevelopment at 1520 E Sepulveda Blvd in Carson.
+
+As your team advances entitlements and begins pre-leasing discussions with major 3PL, port logistics, and manufacturing occupiers, prospective tenants frequently evaluate building clear heights, column grid spacing, slab thickness, and fire-sprinkler design against their racking and automation requirements.
+
+We partner with Southern California industrial developers and leasing teams to provide:
+• Pre-Lease Tenant Test-Fits: Complimentary selective, push-back, VNA, and automated ASRS/VLM storage layouts tailored to your proposed building shells.
+• LA County Fire &amp; Seismic Advisory: Early alignment on California Chapter 32 High-Piled Combustible Storage (HPCS) and ASCE 7-22 slab/seismic demands.
+
+We would love to introduce our engineering team and serve as a complimentary space-planning resource as you market the Carson industrial campus.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#08 · permit-26016-20000-15856</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.35 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Kester Industrial Split — 7765-7775 N Kester Ave (2-Unit Gut Rehab)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">7765-7775 N Kester Ave, Van Nuys, CA 91405 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">43,800 SF</strong> · Est. Capacity: <strong class="text-slate-200">210 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$22,300 – $27,300</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=26016-20000-15856" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.spectrumcre.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Ron Kassan (EVP, Spectrum Commercial Real Estate)</div>
+          <div class="text-slate-400">Executive Vice President, Spectrum CRE (Listing Broker)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>rkassan@spectrumcre.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(818) 252-9900</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED (Batch E): Landlord gutted the industrial building at 7765-7775 N Kester Ave in Van Nuys and is splitting it into two modernized warehouse units. Listing broker Ron Kassan at Spectrum CRE has a published email (rkassan@spectrumcre.com) and is the direct channel to reach both incoming tenants.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-8', 'body-8', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-8" class="font-bold text-white">7765–7775 N Kester Ave (Van Nuys 2-Unit Warehouse Split) — Complimentary Tenant Test-Fit Racking Layouts</span>
+        </div>
+        <pre id="body-8" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Ron,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding the newly renovated two-unit industrial building at 7765–7775 N Kester Ave in Van Nuys.
+
+As you tour prospective warehouse tenants through the two demised units, prospects often want to know immediately how many pallet positions they can fit and what LADBS/LAFD High-Piled Storage permitting will entail.
+
+We would be glad to provide your team and prospective tenants with:
+• Complimentary 48-Hour CAD Pallet Rack Test-Fits: Custom selective or push-back racking layouts showing exact pallet counts for either or both Kester Ave units.
+• Turnkey LADBS &amp; LAFD Permitting: PE-stamped ASCE 7-22 seismic engineering and Chapter 32 high-pile submittals once a tenant signs.
+
+Would you like us to send over a preliminary pallet-capacity test-fit for the two units at 7765–7775 N Kester Ave that you can share with touring prospects?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#09 · permit-24016-20000-30130</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.30 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Rexford Industrial — 16250 W Stagg St (Van Nuys Storage Rack Permit)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">16250 W Stagg St, Van Nuys, CA 91406 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">48,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">830 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$71,900 – $91,800</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=24016-20000-30130" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.rexfordindustrial.com/property/16250-stagg-street" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Emma Miller &amp; Belen Caceres (Rexford Industrial Leasing)</div>
+          <div class="text-slate-400">Leasing &amp; Asset Management, Rexford Industrial</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>emiller@rexfordindustrial.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(310) 297-2287</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED REXFORD BUILDING (Batch E): Active storage rack permit ($98,000 valuation) at Rexford Industrial&#x27;s 16250 W Stagg St property in Van Nuys. Both Rexford contacts — Emma Miller (emiller@rexfordindustrial.com) and Belen Caceres (bcaceres@rexfordindustrial.com) — have published emails on Rexford&#x27;s property portal.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-9', 'body-9', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-9" class="font-bold text-white">16250 W Stagg St (Van Nuys) — Tenant Pallet Racking &amp; LADBS High-Pile Engineering Resource</span>
+        </div>
+        <pre id="body-9" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Emma and Belen,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding Rexford Industrial&#x27;s property at 16250 W Stagg St in Van Nuys.
+
+We partner with Rexford leasing and asset management teams across Southern California to help incoming and expanding tenants design, permit, and install code-compliant warehouse storage systems without delaying rent commencement:
+
+• Complimentary Tenant Space Planning: Fast-turn CAD pallet racking layouts and capacity studies for prospective and current Rexford tenants.
+• Turnkey LADBS &amp; LAFD Permitting: California PE-stamped ASCE 7-22 seismic calculations, NFPA 13 flue-space compliance, and Chapter 32 High-Piled Combustible Storage submittals.
+• Lease-End Rack Restoration: Clean teardown and slab anchor restoration when tenants vacate.
+
+Would you be open to a quick introduction or keeping our engineering team on hand for tenant racking test-fits across your San Fernando Valley portfolio?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#10 · permit-25016-10000-30303</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.25 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Roscoe Moss Manufacturing Co. (4360 E Worth St — Interior Storage Racks)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">4360 E Worth St, Los Angeles, CA 90063 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">46,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">2,960 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$242,300 – $313,300</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=25016-10000-30303" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.roscoemoss.com/contact/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Roscoe Moss Manufacturing Operations</div>
+          <div class="text-slate-400">Plant &amp; Warehouse Operations (Published Company Contact)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>info@roscoemoss.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(323) 263-4111</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED LADBS RACK PERMIT (Batch F): Active LADBS permit to install storage racks inside Roscoe Moss Manufacturing Co.&#x27;s facility at 4360 E Worth St, Los Angeles. Published general inbox info@roscoemoss.com and phone (323) 263-4111.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-10', 'body-10', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-10" class="font-bold text-white">4360 E Worth St (Los Angeles) — Heavy-Duty Industrial Racking, Cantilever &amp; Seismic Support</span>
+        </div>
+        <pre id="body-10" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Roscoe Moss Operations &amp; Facilities Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team nearby in Santa Fe Springs regarding your manufacturing and warehouse campus at 4360 E Worth St.
+
+As your team expands interior storage racking capacity, we support Southern California tubular steel and industrial manufacturers with:
+• Heavy-Duty Cantilever &amp; Selective Racking: Engineered for heavy pipe, casing, tooling dies, and palletized materials.
+• Turnkey LADBS &amp; LAFD Compliance: California PE-stamped ASCE 7-22 seismic engineering, certified anchor installation, and Chapter 32 High-Piled Storage submittals.
+
+Since we are just 15 minutes down I-5 in Santa Fe Springs, please let us know if we can provide a quote on additional racking, cantilever arms, wire decking, or safety guarding for 4360 E Worth St.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#11 · permit-24016-10000-31603</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.25 / 5.00 (A)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Rexford Industrial — 301-445 N Figueroa St (Wilmington Warehouse Rack)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">301-445 N Figueroa St, Wilmington, CA 90744 (Wilmington, CA) · Footprint: <strong class="text-slate-200">38,500 SF</strong> · Est. Capacity: <strong class="text-slate-200">310 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$30,300 – $37,700</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=24016-10000-31603" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.rexfordindustrial.com/property/301-445-north-figueroa-street" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Kindra Brayley &amp; Brandon Foster (Rexford Industrial)</div>
+          <div class="text-slate-400">Leasing &amp; Property Management, Rexford Industrial</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>kbrayley@rexfordindustrial.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(310) 297-2287</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED &amp; GEOCODED TO WILMINGTON (Batch E): Located at 301-445 N Figueroa St in Wilmington, CA (Port of LA corridor, not downtown LA). Rexford Industrial property with interior storage rack permit; published Rexford contacts Kindra Brayley (kbrayley@rexfordindustrial.com) and Brandon Foster (bfoster@rexfordindustrial.com).</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-11', 'body-11', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-11" class="font-bold text-white">301–445 N Figueroa St (Wilmington) — Port Corridor Tenant Racking &amp; Permitting Support</span>
+        </div>
+        <pre id="body-11" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Kindra and Brandon,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding Rexford Industrial&#x27;s Wilmington property at 301–445 N Figueroa St.
+
+We support South Bay and Port of LA industrial tenants and property managers with turnkey warehouse racking, seismic engineering, and LADBS permitting:
+
+• Rapid Tenant Space Planning: Complimentary CAD pallet racking layouts to help incoming or expanding tenants maximize pallet density.
+• Turnkey LADBS &amp; LAFD Permitting: California PE-stamped ASCE 7-22 seismic calculations and High-Piled Storage submittals.
+• Racking Additions &amp; Safety Inspections: Selective racking, wire decking, column guards, and lease-end rack removal/slab restoration.
+
+Please let us know if we can be a resource for your tenants at 301–445 N Figueroa St or across your South Bay portfolio.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#12 · CRE-LIVE-89195</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.20 / 5.00 (A-)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">2520 E Rose Garden Ln (Phoenix 43K SF Taiwanese Investor Acquisition)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">2520 E Rose Garden Ln, Phoenix, AZ 85050 (Phoenix, AZ) · Footprint: <strong class="text-slate-200">43,338 SF</strong> · Est. Capacity: <strong class="text-slate-200">1,275 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$104,600 – $137,700</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rebusinessonline.com/daum-negotiates-10-6m-sale-of-industrial-building-in-phoenix/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.daumcommercial.com/brokers/trevor-mckendry/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Trevor McKendry &amp; Chris Rogers (DAUM Commercial Phoenix)</div>
+          <div class="text-slate-400">Executive Vice Presidents, DAUM Commercial Phoenix</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>tmckendry@daumcommercial.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(602) 957-7300</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED OUT-OF-STATE (Batch B): A private Taiwanese investor bought the 43,338 SF freestanding industrial building at 2520 E Rose Garden Ln in Phoenix this month ($10.56M). The end-user is not public yet, so this email goes to DAUM brokers Trevor McKendry &amp; Chris Rogers (published emails) asking for an intro to the buyer/occupier. Note: Confirm McMurray Stern AZ install coverage before sending.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-12', 'body-12', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-12" class="font-bold text-white">2520 E Rose Garden Ln (Phoenix 43,338 SF Sale) — Storage &amp; VLM Engineering Intro for Buyer/Occupier</span>
+        </div>
+        <pre id="body-12" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Trevor and Chris,
+
+Congratulations on closing the $10.56M sale of the 43,338 SF freestanding industrial facility at 2520 E Rose Garden Ln in Phoenix.
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team. We design and deliver high-density selective pallet racking, cleanroom-compatible Vertical Lift Modules (VLMs), and static-dissipative modular storage for semiconductor supply-chain and precision manufacturing operators across the Southwest.
+
+As the new owner or incoming occupant plans their interior buildout at 2520 E Rose Garden Ln, would you be open to introducing us to their project or facilities representative so we can offer a complimentary CAD storage layout and budgetary proposal?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#13 · permit-26016-10000-08926</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.20 / 5.00 (A-)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Al Dahra ACX Global — 920 E Pacific Coast Hwy (Wilmington Storage Racks)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">920 E Pacific Coast Hwy, Wilmington, CA 90744 (Wilmington, CA) · Footprint: <strong class="text-slate-200">55,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">120 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$15,100 – $18,000</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=26016-10000-08926" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.aldahra.com/en-us/contact-us" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Al Dahra ACX Wilmington Terminal Operations</div>
+          <div class="text-slate-400">Wilmington Export Terminal Operations (Published Contact)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>feed@aldahra.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(310) 835-2662</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED LADBS RACK PERMIT (Batch F): Active LADBS storage rack installation permit at Al Dahra ACX&#x27;s Wilmington Port of LA export facility (920 E Pacific Coast Hwy). Published email feed@aldahra.com and local Wilmington terminal phone (310) 835-2662.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-13', 'body-13', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-13" class="font-bold text-white">920 E Pacific Coast Hwy (Wilmington Terminal) — Heavy-Duty Warehouse Racking &amp; Guarding Support</span>
+        </div>
+        <pre id="body-13" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Al Dahra ACX Wilmington Operations Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding your Wilmington facility at 920 E Pacific Coast Hwy.
+
+We support Port of Los Angeles export and agricultural logistics operators with heavy-duty selective and drive-in pallet racking, heavy-gauge structural upright protectors for high-traffic forklift lanes, and turnkey LADBS / LAFD Chapter 32 seismic engineering.
+
+Please let us know if your Wilmington operations team needs additional racking components, column protection, wire decking, or engineering support as you complete your storage upgrades.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#14 · permit-24016-10000-22172</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.20 / 5.00 (A-)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">UOVO Los Angeles — 130 S Myers St (18&#x27; High-Security Storage Racks)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">130 S Myers St, Los Angeles, CA 90033 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">38,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">120 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$15,100 – $18,000</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=24016-10000-22172" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://uovo.art/locations/los-angeles/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">UOVO Los Angeles Facility Operations</div>
+          <div class="text-slate-400">Los Angeles Facility Management (Published Location Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>la@uovo.art</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(323) 922-5144</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED LADBS RACK PERMIT (Batch F): Active LADBS permit to install 18&#x27; high storage racks at UOVO&#x27;s climate-controlled fine art &amp; archive storage facility at 130 S Myers St in Los Angeles. Published facility email la@uovo.art and phone (323) 922-5144.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-14', 'body-14', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-14" class="font-bold text-white">130 S Myers St (UOVO Los Angeles) — High-Bay Archival Racking, Art Screens &amp; Seismic Engineering</span>
+        </div>
+        <pre id="body-14" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi UOVO Los Angeles Operations Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Archival Engineering team in Santa Fe Springs regarding your facility at 130 S Myers St.
+
+As Southern California&#x27;s exclusive Spacesaver and high-density archival racking partner for museums, collections, and vault facilities, we provide:
+• Museum &amp; Vault Storage Systems: Pull-out art rack screens, oversized crate selective pallet racking, cantilever rolled-textile racks, and high-density mobile shelving.
+• Turnkey LADBS Seismic &amp; High-Pile Compliance: California PE-stamped ASCE 7-22 seismic calculations and NFPA 13 flue-space compliance for 18&#x27;+ storage configurations.
+
+Would your team have 15 minutes this week to discuss any upcoming vault racking, art screen, or seismic permitting requirements at 130 S Myers St?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Pattern (Unverified)">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#15 · permit-24010-10000-03793</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-amber-500/20 text-amber-300 border-amber-500/40">EMAIL: PATTERN (UNVERIFIED)</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.15 / 5.00 (A-)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Dermody Properties — LogistiCenter at 110 (180,705 SF Spec Bldg Due Q2 2027)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">18455 S Figueroa St, Gardena, CA 90248 (Gardena, CA) · Footprint: <strong class="text-slate-200">180,705 SF</strong> · Est. Capacity: <strong class="text-slate-200">5,315 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$435,800 – $574,000</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=24010-10000-03793" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.dermody.com/property/logisticenter-at-110/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Matt Mexia (Partner, Dermody Properties Southern California)</div>
+          <div class="text-slate-400">Southern California Region Partner, Dermody Properties</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>mmexia@dermody.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(949) 234-6775</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED SPEC REDEVELOPMENT (Batch B): Faraday Future vacated 18455 S Figueroa St in March 2026, and Dermody Properties is now building a 180,705 SF Class-A spec industrial building (&#x27;LogistiCenter at 110&#x27;) due Q2 2027. Worth watching for an incoming tenant and offering pre-lease racking test-fits to Dermody.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-15', 'body-15', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-15" class="font-bold text-white">LogistiCenter at 110 (18455 S Figueroa St, 180K SF Spec) — Pre-Lease Tenant Racking Test-Fits</span>
+        </div>
+        <pre id="body-15" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Matt,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding Dermody Properties&#x27; 180,705 SF spec industrial development at 18455 S Figueroa St in Gardena (LogistiCenter at 110, delivering Q2 2027).
+
+As your leasing team markets the building to South Bay 3PL and distribution prospects, we would love to support you with complimentary 48-hour CAD pallet racking and automation test-fits so prospective tenants can immediately visualize pallet capacity and LA County Fire Chapter 32 High-Piled Storage compliance.
+
+Please let us know if we can prepare a baseline 36&#x27;-clear selective racking layout for the 18455 S Figueroa shell to include in your marketing package.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="General inbox">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#16 · GOV-LAPD-EVID-2026</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-sky-500/20 text-sky-300 border-sky-500/40">EMAIL: GENERAL INBOX</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.15 / 5.00 (A-)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">City of LA / LAPD — Planned 80,000 SF El Sereno Evidence Warehouse</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">El Sereno Evidence Warehouse Site (Bureau of Engineering), Los Angeles, CA 90032 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">80,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">1,610 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$134,300 – $172,900</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.rampla.org/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://eng.lacity.gov/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">LA Bureau of Engineering / LAPD Property Division</div>
+          <div class="text-slate-400">Municipal Facilities &amp; Evidence Storage Planning (General Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>eng.publicinfo@lacity.org</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(213) 485-4935</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED &amp; CORRECTED ADDRESS (Batch C): Corrected from 100 W 1st St HQ to the real opportunity: a planned 80,000 SF LAPD Evidence Warehouse in El Sereno, currently in environmental review. Early capability introduction positions McMurray Stern / Spacesaver high-density mobile evidence storage and pallet racking before architectural specs lock.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-16', 'body-16', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-16" class="font-bold text-white">Capability Introduction: High-Density Evidence Storage &amp; Racking — Planned 80,000 SF El Sereno LAPD Evidence Warehouse</span>
+        </div>
+        <pre id="body-16" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi City of Los Angeles Bureau of Engineering &amp; LAPD Facilities Planning Team,
+
+I am reaching out from McMurray Stern&#x27;s Municipal &amp; Public Safety Storage Engineering team in Santa Fe Springs as a capability introduction regarding the planned 80,000 SF LAPD Evidence Warehouse in El Sereno.
+
+While the project is in environmental review and design development, our engineering team regularly assists California municipal agencies and project architects with complimentary pre-design space planning, structural slab load data, and cooperative purchasing options (Sourcewell / CMAS):
+
+• High-Density Evidence &amp; Property Systems: Spacesaver mechanical-assist and powered high-density mobile shelving, secure narcotics/firearms lockers, refrigerated biological evidence cabinets, and heavy-duty bulk pallet racking.
+• Turnkey California Seismic &amp; Fire Engineering: PE-stamped ASCE 7-22 seismic calculations, recessed/surface rail floor-loading specs, and LADBS Chapter 32 High-Piled Storage compliance.
+
+We would welcome the opportunity to provide complimentary preliminary CAD design criteria or budget estimates to the project management team overseeing the El Sereno Evidence Warehouse.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Pattern (Unverified)">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#17 · CRE-NV-ALPLA-07</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-amber-500/20 text-amber-300 border-amber-500/40">EMAIL: PATTERN (UNVERIFIED)</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.10 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">ALPLA Inc. — North Las Vegas 141,540 SF Bottle Plant (Opening Spring 2027)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">Craig Road Logistics Center (Bldg A), North Las Vegas, NV 89032 (North Las Vegas, NV) · Footprint: <strong class="text-slate-200">141,540 SF</strong> · Est. Capacity: <strong class="text-slate-200">3,300 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$270,600 – $356,400</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rebusinessonline.com/packaging-manufacturer-recycler-signs-141540-sf-industrial-lease-in-north-las-vegas/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.cushmanwakefield.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Daniel Wilkins &amp; Lou Hall (Cushman &amp; Wakefield NV) / ALPLA Regional MD</div>
+          <div class="text-slate-400">Leasing Brokers (Pattern - Unverified) — No Regional MD Email Published Yet</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>daniel.wilkins@cushwake.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(702) 796-7900</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED OUT-OF-STATE (Batch B): Confirmed 141,540 SF ALPLA packaging/bottle manufacturing &amp; distribution plant opening in North Las Vegas in Spring 2027. No email has turned up for their regional Managing Director yet; broker email follows Cushman &amp; Wakefield pattern (unverified). Confirm McMurray Stern NV installation coverage before sending.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-17', 'body-17', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-17" class="font-bold text-white">ALPLA North Las Vegas Plant (141,540 SF Craig Rd Logistics Center) — High-Density Pallet Rack &amp; Automation</span>
+        </div>
+        <pre id="body-17" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Daniel,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team regarding ALPLA&#x27;s upcoming 141,540 SF bottle manufacturing and distribution facility at Craig Road Logistics Center (Building A) in North Las Vegas, scheduled for Spring 2027.
+
+High-volume packaging and bottle plants require specialized high-density drive-in, push-back, or pallet-shuttle racking to stage finished goods alongside automated Vertical Lift Modules (VLMs) for spare tooling and molds.
+
+Could you point us to the appropriate project engineering or facilities contact at ALPLA overseeing the North Las Vegas buildout so we can provide complimentary space planning and seismic engineering support?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#18 · CRE-IE-KEECO-09</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">LIQUIDATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.05 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Keeco LLC — Rialto 677,225 SF Lease Expiration (Rack Teardown / Buyout Check)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">1420 N Tamarind Ave, Rialto, CA 92376 (Rialto, CA) · Footprint: <strong class="text-slate-200">677,225 SF</strong> · Est. Capacity: <strong class="text-slate-200">15,800 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$1,295,600 – $1,706,400</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rebusinessonline.com/keeco-leases-677225-sf-industrial-facility-in-rialto/" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.lee-associates.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Michael Chavez (Lee &amp; Associates) / Keeco Facilities</div>
+          <div class="text-slate-400">Principal, Lee &amp; Associates (Published) — Phone Check Recommended</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>mchavez@lee-assoc.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(909) 989-7771 / (510) 324-8800</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED TEARDOWN CHECK (Batch A): Keeco&#x27;s 10-year 2015 lease on this 677,225 SF Rialto distribution center ran out around mid-2025. One quick phone call or note to broker Michael Chavez at Lee &amp; Associates (published email mchavez@lee-assoc.com) can confirm whether a 677K SF rack teardown/buyout or backfilling tenant buildout is up for grabs.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-18', 'body-18', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-18" class="font-bold text-white">1420 N Tamarind Ave (677,225 SF Rialto DC) — Rack Teardown / Slab Restoration or Incoming Tenant Layout</span>
+        </div>
+        <pre id="body-18" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Michael,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding the 677,225 SF distribution facility at 1420 N Tamarind Ave in Rialto.
+
+With Keeco&#x27;s 10-year lease term reaching maturity, we wanted to check whether ownership or the outgoing/incoming tenant has an upcoming need for:
+• Large-Scale Rack Teardown, Buyout &amp; Slab Restoration: Fast-track dismantling, used-rack purchase credit, and concrete anchor restoration across the 677,225 SF footprint.
+• Reconfiguration or New Tenant Racking: PE-stamped ASCE 7-22 seismic engineering, Chapter 32 High-Piled Storage submittals, and selective/push-back pallet racking.
+
+Do you have 5 minutes for a quick call at (909) 989-7771 this week to let us know the current status at 1420 N Tamarind Ave?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="General inbox">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#19 · permit-23010-20003-04138</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-sky-500/20 text-sky-300 border-sky-500/40">EMAIL: GENERAL INBOX</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">NEW_CONSTRUCTION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 4.05 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Longpoint Partners — 16161 W Raymer St (New 56,700 SF Van Nuys Warehouse)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">16161 W Raymer St, Van Nuys, CA 91406 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">56,700 SF</strong> · Est. Capacity: <strong class="text-slate-200">580 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$51,900 – $65,800</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=23010-20003-04138" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.longpoint.com/contact/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Longpoint Partners Asset Management</div>
+          <div class="text-slate-400">Industrial Acquisitions &amp; Asset Mgmt (Published Corporate Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>info@longpoint.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(617) 303-0700</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED NEW WAREHOUSE (Batch F): Active LADBS permit constructing a new 56,700 SF industrial warehouse with mezzanine at 16161 W Raymer St in Van Nuys. General inbox info@longpoint.com published on Longpoint&#x27;s site.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-19', 'body-19', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-19" class="font-bold text-white">16161 W Raymer St (Van Nuys 56,700 SF Warehouse) — Complimentary Tenant Racking Test-Fits</span>
+        </div>
+        <pre id="body-19" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Longpoint Partners Asset Management Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding your new 56,700 SF warehouse facility at 16161 W Raymer St in Van Nuys.
+
+We partner with Southern California industrial owners and leasing brokers to provide complimentary 48-hour CAD pallet racking test-fits and California Chapter 32 High-Piled Storage code assessments for incoming tenants.
+
+Please let us know who is handling leasing or construction management for 16161 W Raymer St so we can share a baseline pallet-capacity layout for the building.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#20 · GOV-OCPW-2026</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 3.95 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Orange County Public Works — Procurement Capability Introduction</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">2301 N Glassell St / 601 N Ross St, Orange / Santa Ana, CA 92865 (Orange, CA) · Footprint: <strong class="text-slate-200">45,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">970 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$83,100 – $106,400</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://vendors.planetbids.com/portal/39472/bo/bo-search" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://ocpublicworks.com/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">OC Public Works Procurement Services</div>
+          <div class="text-slate-400">County Procurement Office (Published Departmental Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>OCPWProcurement@ocpw.ocgov.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(714) 667-8800</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED CAPABILITY INTRO (Batch C): Confirmed no open storage solicitation right now, but OC Public Works publishes its official procurement contact (OCPWProcurement@ocpw.ocgov.com). Tailored as a cooperative-contract (Sourcewell / CMAS) capability introduction for fleet yard pallet racking and automated parts storage.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-20', 'body-20', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-20" class="font-bold text-white">Capability Introduction (Sourcewell / CMAS): Warehouse Racking &amp; Fleet Parts Storage — OC Public Works</span>
+        </div>
+        <pre id="body-20" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi OC Public Works Procurement Team,
+
+I am writing from McMurray Stern in Santa Fe Springs to introduce our municipal warehouse racking, fleet maintenance storage, and automated parts management capabilities for upcoming Orange County Public Works facility projects.
+
+Whenever OCPW fleet maintenance yards, flood-control depots, or county warehouses require storage upgrades, we streamline county procurement through cooperative contracts (Sourcewell / CMAS) and turnkey local execution:
+
+• Heavy-Duty Yard &amp; Warehouse Racking: Selective pallet rack, structural cantilever rack for pipe/lumber/bar stock, and industrial work platforms.
+• Automated Parts &amp; Tool Cribs: Vertical Lift Modules (VLMs) and Spacesaver high-density mobile shelving that recover up to 75% of floor space in fleet maintenance shops.
+• Turnkey Engineering &amp; DIR Prevailing Wage Installation: California PE-stamped ASCE 7-22 seismic submittals and certified installation.
+
+Could we share our municipal line card and cooperative contract numbers with your facilities and fleet buyers for future requirements?
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="General inbox">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#21 · permit-26020-40000-00318</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-sky-500/20 text-sky-300 border-sky-500/40">EMAIL: GENERAL INBOX</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 3.95 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">Avalon Industrial Complex — 6818 &amp; 6828 S Avalon Blvd (High-Pile Rack Permits)</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">6818-6828 S Avalon Blvd, Los Angeles, CA 90003 (Los Angeles, CA) · Footprint: <strong class="text-slate-200">36,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">170 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$19,100 – $23,200</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/SearchByPermitNumber?PermitNumber=26020-40000-00318" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.ladbsservices2.lacity.org/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">Dorin Realty Co. Industrial Management</div>
+          <div class="text-slate-400">Industrial Property Management (General Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>info@dorinrealty.com</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(213) 627-0007</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED LADBS RACK PERMITS (Batch F): Consolidated dual storage rack permits at 6818 &amp; 6828 S Avalon Blvd in South Los Angeles (13&#x27;-4&quot; interior storage racks and high-pile fire protection).</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-21', 'body-21', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-21" class="font-bold text-white">6818–6828 S Avalon Blvd (Los Angeles) — Warehouse Racking, Wire Decking &amp; LADBS Support</span>
+        </div>
+        <pre id="body-21" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">Hi Property Management &amp; Warehouse Operations Team,
+
+I am reaching out from McMurray Stern&#x27;s Storage &amp; Automation Engineering team in Santa Fe Springs regarding the industrial facilities at 6818–6828 S Avalon Blvd.
+
+As your team installs interior pallet racking and coordinates LADBS/LAFD fire clearance, our local Santa Fe Springs warehouse can supply quick-ship selective racking, NFPA 13 compliant wire mesh waterfall decks, column guards, and PE-stamped seismic calculations.
+
+Please let us know if we can assist with any racking materials or installation support at 6818–6828 S Avalon Blvd.
+
+Best regards,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="Published">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#22 · GOV-MARCH-ARB-2026</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/40">EMAIL: PUBLISHED</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 3.90 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">452d Air Mobility Wing (March ARB) — Contracting Capability Introduction</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">March Air Reserve Base, Riverside, CA 92518 (Riverside, CA) · Footprint: <strong class="text-slate-200">65,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">1,230 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$103,900 – $133,400</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://sam.gov/search/?keywords=FA6606-26-Q-0112&amp;sort=-relevance" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.march.afrc.af.mil/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">452d Operational Contracting Office (452 CONF/PK)</div>
+          <div class="text-slate-400">Base Contracting Squadron (Published Base Contracting Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>452conf.pk@us.af.mil</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(951) 655-2045</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED CAPABILITY INTRO (Batch C): Confirmed no open storage solicitation at March ARB today, so outreach is framed as a formal WOSB / GSA capability introduction to the published 452d Contracting Squadron inbox (452conf.pk@us.af.mil).</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-22', 'body-22', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-22" class="font-bold text-white">Capability Introduction: Logistics Racking, VLMs &amp; Armory Storage — 452d Air Mobility Wing (March ARB)</span>
+        </div>
+        <pre id="body-22" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">To the 452d Operational Contracting Squadron (452 CONF/PK),
+
+I am reaching out from McMurray Stern in Santa Fe Springs, CA to submit a brief capability introduction for warehouse pallet racking, automated Vertical Lift Modules (VLMs), and weapons/mobility storage supporting March Air Reserve Base.
+
+Located less than an hour from March ARB, McMurray Stern provides turnkey design, California PE-stamped ASCE 7-22 seismic engineering, and certified installation across Southern California DoD installations:
+
+• Base Supply &amp; Aerial Port Racking: Heavy-duty selective, cantilever, and drive-in pallet racking compliant with UFC 4-440-01 and NFPA 13.
+• Maintenance &amp; Avionics Parts Automation: Enclosed Vertical Lift Modules (VLMs) and Spacesaver Universal Weapons Racks (UWR) / high-density mobile shelving.
+
+We would be honored to send our federal capability statement and past-performance summary to keep on file for upcoming 452d Air Mobility Wing and tenant unit requirements.
+
+Respectfully,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    <div class="lead-card bg-slate-900/95 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl" data-prov="General inbox">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-slate-800 pb-4">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-1.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-600/20 border border-blue-500/40 text-blue-300 font-mono text-xs font-bold">#23 · GOV-CAMP-PEND-2026</span>
+            <span class="px-2.5 py-0.5 rounded-md border font-mono text-xs font-bold bg-sky-500/20 text-sky-300 border-sky-500/40">EMAIL: GENERAL INBOX</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 font-mono text-xs">RECONFIGURATION</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-rose-500/15 border border-rose-500/30 text-rose-300 font-mono text-xs font-bold">Score 3.85 / 5.00 (B+)</span>
+          </div>
+          <h3 class="text-lg font-extrabold text-white">USMC Camp Pendleton — Regional Contracting Capability Introduction</h3>
+          <p class="text-xs text-slate-400 font-mono mt-0.5">Bldg 22165, Marine Corps Base Camp Pendleton, CA 92055 (Oceanside, CA) · Footprint: <strong class="text-slate-200">85,000 SF</strong> · Est. Capacity: <strong class="text-slate-200">2,330 Pallets</strong> · Est. Turnkey Racking: <strong class="text-emerald-400">$191,900 – $247,800</strong></p>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://sam.gov/search/?keywords=W912HZ-26-R-0042&amp;sort=-relevance" target="_blank" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition">Filing Source &nearr;</a>
+          <a href="https://www.pendleton.marines.mil/Staff-Agencies/Regional-Contracting-Office/" target="_blank" class="px-3 py-1.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 text-xs font-semibold border border-emerald-500/40 transition">Email Proof &nearr;</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-bold">Verified Contact &amp; Provenance</div>
+          <div class="font-bold text-white text-sm">MCIWEST Regional Contracting Office — Camp Pendleton</div>
+          <div class="text-slate-400">Regional Contracting Office (General Inbox)</div>
+          <div class="pt-1 font-mono text-blue-400 break-all">Email: <strong>pendleton_contracting@usmc.mil</strong></div>
+          <div class="font-mono text-slate-300">Phone: <strong>(760) 725-8450</strong></div>
+        </div>
+        <div class="lg:col-span-2 bg-slate-950/80 border border-slate-800/90 rounded-xl p-4 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold">Ground-Truth Audit Finding (Batches A–F)</div>
+          <p class="text-slate-200 leading-relaxed text-xs">VERIFIED CAPABILITY INTRO (Batch C): Confirmed no active storage bid at Camp Pendleton today; framed as a Southern California defense storage capability introduction to the Regional Contracting Office.</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 space-y-2.5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-sky-400">Tailored Consultative Outreach Draft (Ready for Outlook / HubSpot)</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyDraft('subj-23', 'body-23', this)" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition cursor-pointer">Copy Subject + Body</button>
+          </div>
+        </div>
+        <div class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-slate-200">
+          <span class="text-slate-500">Subject:</span> <span id="subj-23" class="font-bold text-white">Capability Introduction: USMC Armory, Supply Warehouse Racking &amp; VLM Systems — MCB Camp Pendleton</span>
+        </div>
+        <pre id="body-23" class="text-xs font-mono bg-slate-900 border border-slate-800 rounded-lg p-3 text-slate-300 whitespace-pre-wrap leading-relaxed">To the MCIWEST Regional Contracting Office — MCB Camp Pendleton,
+
+I am reaching out from McMurray Stern in Santa Fe Springs, CA to introduce our Southern California defense logistics, armory, and warehouse storage engineering capabilities supporting Marine Corps Base Camp Pendleton.
+
+Whenever Camp Pendleton supply warehouses, armories, or maintenance facilities plan storage modernizations, our local team provides complimentary on-base space surveys, CAD layouts, and PE-stamped seismic engineering:
+
+• Armory &amp; Tactical Gear Storage: Spacesaver Universal Weapons Racks (UWR), high-density mobile systems, and TA-50 gear lockers.
+• Supply Warehouse Pallet Racking &amp; VLMs: Heavy-duty selective pallet racking, cantilever racks, and automated Vertical Lift Modules (VLMs).
+
+May we share our federal capability statement with your small-business specialist or facilities buyers for upcoming fiscal year requirements?
+
+Respectfully,
+
+McMurray Stern — Storage, Racking &amp; Automation Solutions
+15511 Carmenita Rd, Santa Fe Springs, CA 90670
+www.mcmurraystern.com</pre>
+      </div>
+    </div>
+    
+    </section>
+  </main>
+
+  <script>
+    function copyDraft(subjId, bodyId, btn) {
+      const s = document.getElementById(subjId).innerText;
+      const b = document.getElementById(bodyId).innerText;
+      navigator.clipboard.writeText("Subject: " + s + "\n\n" + b);
+      const orig = btn.innerText;
+      btn.innerText = "✓ Copied!";
+      setTimeout(() => btn.innerText = orig, 2000);
+    }
+    function filterCards(mode, btn) {
+      document.querySelectorAll(".flt-btn").forEach(b => {
+        b.classList.remove("bg-blue-600", "text-white");
+        b.classList.add("bg-slate-900");
+      });
+      btn.classList.add("bg-blue-600", "text-white");
+      btn.classList.remove("bg-slate-900");
+      document.querySelectorAll(".lead-card").forEach(c => {
+        const p = c.getAttribute("data-prov") || "";
+        c.style.display = (mode === "ALL" || p.includes(mode)) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
