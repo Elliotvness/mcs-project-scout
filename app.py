@@ -72,6 +72,24 @@ async def raw_leads_json():
     return FileResponse(LEADS_FILE, media_type="application/json", filename="mcs_verified_leads.json")
 
 
+@app.get("/Project_Scout_Outreach_Oct_2026.pdf")
+async def outreach_pdf():
+    return FileResponse(
+        BASE_DIR / "Project_Scout_Outreach_Oct_2026.pdf",
+        media_type="application/pdf",
+        filename="Project_Scout_Outreach_Oct_2026.pdf",
+    )
+
+
+@app.get("/verify_leads.py")
+async def verify_leads_script():
+    return FileResponse(
+        BASE_DIR / "verify_leads.py",
+        media_type="text/x-python",
+        filename="verify_leads.py",
+    )
+
+
 @app.get("/healthz")
 async def healthz():
     return {"status": "ok", "leads_count": len(LEADS_DB)}
@@ -150,7 +168,7 @@ async def send_lead_via_outlook(lead_id: str, request: Request):
     if os.name == "nt" and payload.get("use_com"):
         try:
             import subprocess
-            action_cmd = "$mail.Send();" if auto_send else "$mail.Display($true);"
+            action_cmd = "$mail.Save(); $mail.Display($true);"  # Design choice: Never auto-send; always stage draft for review
             ps_script = (
                 "$ol = New-Object -ComObject Outlook.Application; "
                 "$mail = $ol.CreateItem(0); "
@@ -360,7 +378,7 @@ def fetch_live_ladbs_permits(existing_ids: set, now_dt: datetime) -> list:
     """Pull recent commercial warehouse/storage rack permits from City of LA Open Data API."""
     new_items = []
     query = (
-        "$where=(valuation >= 50000) AND ("
+        "$where=(valuation >= 50000) AND (upper(status_desc) NOT LIKE '%FINAL%' AND upper(status_desc) NOT LIKE '%COFO%' AND upper(status_desc) NOT LIKE '%EXPIRED%') AND ("
         "upper(work_description) like '%WAREHOUSE%' OR "
         "upper(work_description) like '%STORAGE RACK%' OR "
         "upper(work_description) like '%PALLET RACK%' OR "
